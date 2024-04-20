@@ -1,0 +1,2 @@
+idf_component_register(SRCS "main.c" "randombytes.c" "sign.c" "packing.c" "polyvec.c" "poly.c" "ntt.c" "reduce.c" "rounding.c" "fips202.c" "symmetric-shake.c"
+                    INCLUDE_DIRS "/home/ruben/esp/esp-idf/components/esp_hw_support/include/")

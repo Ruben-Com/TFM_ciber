@@ -1,0 +1,17 @@
+.vscode/
+dilithium/avx2/
+dilithium/ref/
+dilithium/build/
+dilithium/Dilithium*
+dilithium/.gitignore
+dilithium/.travis.yml
+dilithium/AUTHORS.md
+dilithium/aux.c
+dilithium/Common_META.yml
+dilithium/gdbinit
+dilithium/LICENSE
+dilithium/README.md
+dilithium/runlcov.sh
+dilithium/runtests.sh
+dilithium/sdkconfig
+dilithium/SHA256SUMS
