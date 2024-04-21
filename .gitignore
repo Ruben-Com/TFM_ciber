@@ -2,6 +2,8 @@
 dilithium/avx2/
 dilithium/ref/
 dilithium/build/
+dilithium/main/main
+dilithium/main.bak
 dilithium/Dilithium*
 dilithium/.gitignore
 dilithium/.travis.yml
@@ -15,3 +17,10 @@ dilithium/runlcov.sh
 dilithium/runtests.sh
 dilithium/sdkconfig
 dilithium/SHA256SUMS
+dilithium/dilithium-master.zip
+dilithium/sdkconfig.old
+dilithium/dilithium-master/
+dilithium/main/test/
+dilithium/main.bak/
+dilithium/main.bak2/
+dilithium/main/precomp.gp

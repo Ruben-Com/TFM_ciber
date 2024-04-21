@@ -354,17 +354,17 @@ void poly_uniform(poly *a,
   stream128_init(&state, seed, nonce);
   stream128_squeezeblocks(buf, POLY_UNIFORM_NBLOCKS, &state);
 
-  ctr = rej_uniform(a->coeffs, N, buf, buflen);
+  // ctr = rej_uniform(a->coeffs, N, buf, buflen);
 
-  while(ctr < N) {
-    off = buflen % 3;
-    for(i = 0; i < off; ++i)
-      buf[i] = buf[buflen - off + i];
+  // while(ctr < N) {
+  //   off = buflen % 3;
+  //   for(i = 0; i < off; ++i)
+  //     buf[i] = buf[buflen - off + i];
 
-    stream128_squeezeblocks(buf + off, 1, &state);
-    buflen = STREAM128_BLOCKBYTES + off;
-    ctr += rej_uniform(a->coeffs + ctr, N - ctr, buf, buflen);
-  }
+  //   stream128_squeezeblocks(buf + off, 1, &state);
+  //   buflen = STREAM128_BLOCKBYTES + off;
+  //   ctr += rej_uniform(a->coeffs + ctr, N - ctr, buf, buflen);
+  // }
 }
 
 /*************************************************

@@ -4,6 +4,7 @@
 #include "randombytes.h"
 
 #undef __linux__
+#define ESP32
 
 #ifdef _WIN32
 #include <windows.h>
@@ -15,6 +16,8 @@
 #define _GNU_SOURCE
 #include <unistd.h>
 #include <sys/syscall.h>
+#elif defined(ESP32)
+#include "esp_random.h"
 #else
 #include <unistd.h>
 #endif
@@ -54,6 +57,10 @@ void randombytes(uint8_t *out, size_t outlen) {
     out += ret;
     outlen -= ret;
   }
+}
+#elif defined(ESP32)
+void randombytes(uint8_t *out, size_t outlen) {
+  esp_fill_random(out, outlen);
 }
 #else
 void randombytes(uint8_t *out, size_t outlen) {
