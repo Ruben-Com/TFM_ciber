@@ -35,14 +35,14 @@ int crypto_sign_keypair(uint8_t *pk, uint8_t *sk) {
   rhoprime = rho + SEEDBYTES;
   key = rhoprime + CRHBYTES;
 
-  // /* Expand matrix */
+  /* Expand matrix */
   polyvec_matrix_expand(mat, rho);
 
-  // /* Sample short vectors s1 and s2 */
+  /* Sample short vectors s1 and s2 */
   // polyvecl_uniform_eta(&s1, rhoprime, 0);
   // polyveck_uniform_eta(&s2, rhoprime, L);
 
-  // /* Matrix-vector multiplication */
+  /* Matrix-vector multiplication */
   // s1hat = s1;
   // polyvecl_ntt(&s1hat);
   // polyvec_matrix_pointwise_montgomery(&t1, mat, &s1hat);
