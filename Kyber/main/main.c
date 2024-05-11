@@ -19,23 +19,23 @@
 void app_main (void)
 {
     printf("Inicio\n\r");
-    // uint8_t *pk, *sk;
-    // pk = (uint8_t*) malloc(pqcrystals_kyber1024_PUBLICKEYBYTES * sizeof(uint8_t));
-    // sk = (uint8_t*) malloc(pqcrystals_kyber1024_SECRETKEYBYTES * sizeof(uint8_t));
+    unsigned char *pk, *sk;
+    pk = (unsigned char*) malloc(KYBER_INDCPA_PUBLICKEYBYTES * sizeof(unsigned char));
+    sk = (unsigned char*) malloc(KYBER_INDCPA_SECRETKEYBYTES * sizeof(unsigned char));
     
     // pqcrystals_kyber512_ref_keypair(pk, sk);
 
     // crypto_kem_keypair(pk, sk);
 
-    unsigned char pk[CRYPTO_PUBLICKEYBYTES], sk[CRYPTO_SECRETKEYBYTES];
+    // unsigned char pk[CRYPTO_PUBLICKEYBYTES*2], sk[CRYPTO_SECRETKEYBYTES*2];
     int ret_val;
 
     if ( (ret_val = crypto_kem_keypair(pk, sk)) != 0) {
-        printf("crypto_kem_keypair returned <%d>\n", ret_val);
+        printf("Crypto_kem_keypair returned <%d>\n\r", ret_val);
     }
 
     printf("Terminado\n\r");
 
-    // free(pk);
-    // free(sk);
+    free(pk);
+    free(sk);
 }

@@ -8,6 +8,8 @@
 #include "symmetric.h"
 #include "randombytes.h"
 
+#include <stdio.h>
+
 /*************************************************
 * Name:        pack_pk
 *
@@ -178,14 +180,14 @@ void gen_matrix(polyvec *a, const uint8_t seed[KYBER_SYMBYTES], int transposed)
       buflen = GEN_MATRIX_NBLOCKS*XOF_BLOCKBYTES;
       ctr = rej_uniform(a[i].vec[j].coeffs, KYBER_N, buf, buflen);
 
-      // while(ctr < KYBER_N) {
-      //   off = buflen % 3;
-      //   for(k = 0; k < off; k++)
-      //     buf[k] = buf[buflen - off + k];
-      //   xof_squeezeblocks(buf + off, 1, &state);
-      //   buflen = off + XOF_BLOCKBYTES;
-      //   ctr += rej_uniform(a[i].vec[j].coeffs + ctr, KYBER_N - ctr, buf, buflen);
-      // }
+      while(ctr < KYBER_N) {
+        off = buflen % 3;
+        for(k = 0; k < off; k++)
+          buf[k] = buf[buflen - off + k];
+        xof_squeezeblocks(buf + off, 1, &state);
+        buflen = off + XOF_BLOCKBYTES;
+        ctr += rej_uniform(a[i].vec[j].coeffs + ctr, KYBER_N - ctr, buf, buflen);
+      }
     }
   }
 }
@@ -205,33 +207,39 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
                     uint8_t sk[KYBER_INDCPA_SECRETKEYBYTES])
 {
   unsigned int i;
-  uint8_t buf[2*KYBER_SYMBYTES];
+  // uint8_t buf[2*KYBER_SYMBYTES];
+  uint8_t *buf;
+  buf = (uint8_t*) malloc(2*KYBER_SYMBYTES * sizeof(uint8_t));
   const uint8_t *publicseed = buf;
   const uint8_t *noiseseed = buf+KYBER_SYMBYTES;
   uint8_t nonce = 0;
-  polyvec a[KYBER_K], e, pkpv, skpv;
+  polyvec *a, *e, *pkpv, *skpv;
+  a = (polyvec*) malloc(KYBER_K * sizeof(polyvec));
+  e = (polyvec*) malloc(sizeof(polyvec));
+  pkpv = (polyvec*) malloc(sizeof(polyvec));
+  skpv = (polyvec*) malloc(sizeof(polyvec));
 
   randombytes(buf, KYBER_SYMBYTES);
   hash_g(buf, buf, KYBER_SYMBYTES);
-
+  //TODO: HASTA AQUÍ FUNCIONA
   gen_a(a, publicseed);
 
-  // for(i=0;i<KYBER_K;i++)
-  //   poly_getnoise_eta1(&skpv.vec[i], noiseseed, nonce++);
-  // for(i=0;i<KYBER_K;i++)
-  //   poly_getnoise_eta1(&e.vec[i], noiseseed, nonce++);
+  for(i=0;i<KYBER_K;i++)
+    poly_getnoise_eta1(&skpv->vec[i], noiseseed, nonce++);
+  for(i=0;i<KYBER_K;i++)
+    poly_getnoise_eta1(&e->vec[i], noiseseed, nonce++);
 
-  // polyvec_ntt(&skpv);
-  // polyvec_ntt(&e);
+  polyvec_ntt(skpv);
+  polyvec_ntt(e);
 
-  // // matrix-vector multiplication
-  // for(i=0;i<KYBER_K;i++) {
-  //   polyvec_basemul_acc_montgomery(&pkpv.vec[i], &a[i], &skpv);
-  //   poly_tomont(&pkpv.vec[i]);
-  // }
+  // matrix-vector multiplication
+  for(i=0;i<KYBER_K;i++) {
+    polyvec_basemul_acc_montgomery(&pkpv->vec[i], &a[i], skpv);
+    poly_tomont(&pkpv->vec[i]);
+  }
 
-  // polyvec_add(&pkpv, &pkpv, &e);
-  // polyvec_reduce(&pkpv);
+  polyvec_add(pkpv, pkpv, e);
+  polyvec_reduce(pkpv);
 
   // pack_sk(sk, &skpv);
   // pack_pk(pk, &pkpv, publicseed);
