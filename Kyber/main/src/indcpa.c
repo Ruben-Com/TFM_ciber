@@ -223,7 +223,6 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
   pkpv = (polyvec*) malloc(sizeof(polyvec));
   skpv = (polyvec*) malloc(sizeof(polyvec));
 
-  //TODO: HASTA AQUÍ FUNCIONA
   gen_a(a, publicseed);
 
   for(i=0;i<KYBER_K;i++)
@@ -250,6 +249,8 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
   pack_sk(sk, skpv);
   pack_pk(pk, pkpv, publicseed);
   free(buf);
+  free(pkpv);
+  free(skpv);
 }
 
 /*************************************************

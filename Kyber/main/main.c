@@ -18,7 +18,7 @@ void app_main (void)
     if (crypto_kem_keypair(pk, sk) != 0) {
         printf("Generacion de claves fallida\n\r");
     } else {
-        printf("Generacion de claves exitosa\n\r");
+        printf("Generacion de claves exitosa (%d bytes de clave publica y %d bytes de clave privada)\n\r", KYBER_INDCPA_PUBLICKEYBYTES, KYBER_INDCPA_SECRETKEYBYTES);
     }
 
     free(pk);
