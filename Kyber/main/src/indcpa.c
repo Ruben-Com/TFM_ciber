@@ -214,13 +214,15 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
   const uint8_t *noiseseed = buf+KYBER_SYMBYTES;
   uint8_t nonce = 0;
   polyvec *a, *e, *pkpv, *skpv;
+
+  randombytes(buf, KYBER_SYMBYTES);
+  hash_g(buf, buf, KYBER_SYMBYTES);
+
   a = (polyvec*) malloc(KYBER_K * sizeof(polyvec));
   e = (polyvec*) malloc(sizeof(polyvec));
   pkpv = (polyvec*) malloc(sizeof(polyvec));
   skpv = (polyvec*) malloc(sizeof(polyvec));
 
-  randombytes(buf, KYBER_SYMBYTES);
-  hash_g(buf, buf, KYBER_SYMBYTES);
   //TODO: HASTA AQUÍ FUNCIONA
   gen_a(a, publicseed);
 
@@ -238,11 +240,16 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
     poly_tomont(&pkpv->vec[i]);
   }
 
+  free(a);
+
   polyvec_add(pkpv, pkpv, e);
   polyvec_reduce(pkpv);
 
-  // pack_sk(sk, &skpv);
-  // pack_pk(pk, &pkpv, publicseed);
+  free(e);
+
+  pack_sk(sk, skpv);
+  pack_pk(pk, pkpv, publicseed);
+  free(buf);
 }
 
 /*************************************************
