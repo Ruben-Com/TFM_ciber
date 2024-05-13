@@ -207,7 +207,6 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
                     uint8_t sk[KYBER_INDCPA_SECRETKEYBYTES])
 {
   unsigned int i;
-  // uint8_t buf[2*KYBER_SYMBYTES];
   uint8_t *buf;
   buf = (uint8_t*) malloc(2*KYBER_SYMBYTES * sizeof(uint8_t));
   const uint8_t *publicseed = buf;
@@ -239,18 +238,17 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
     poly_tomont(&pkpv->vec[i]);
   }
 
-  free(a);
-
   polyvec_add(pkpv, pkpv, e);
   polyvec_reduce(pkpv);
 
-  free(e);
-
   pack_sk(sk, skpv);
   pack_pk(pk, pkpv, publicseed);
+
   free(buf);
-  free(pkpv);
+  free(a);
+  free(e);
   free(skpv);
+  free(pkpv);
 }
 
 /*************************************************
@@ -275,39 +273,60 @@ void indcpa_enc(uint8_t c[KYBER_INDCPA_BYTES],
                 const uint8_t coins[KYBER_SYMBYTES])
 {
   unsigned int i;
-  uint8_t seed[KYBER_SYMBYTES];
+  uint8_t *seed;
+  seed = (uint8_t*) malloc(KYBER_SYMBYTES * sizeof(uint8_t));
   uint8_t nonce = 0;
-  polyvec sp, pkpv, ep, at[KYBER_K], b;
-  poly v, k, epp;
 
-  unpack_pk(&pkpv, seed, pk);
-  poly_frommsg(&k, m);
+  polyvec *sp, *pkpv, *ep, *at, *b;
+  sp = (polyvec*) malloc(sizeof(polyvec));
+  pkpv = (polyvec*) malloc(sizeof(polyvec));
+  ep = (polyvec*) malloc(sizeof(polyvec));
+  at = (polyvec*) malloc(KYBER_K * sizeof(polyvec));
+  b = (polyvec*) malloc(sizeof(polyvec));
+
+  poly *v, *k, *epp;
+  v = (poly*) malloc(sizeof(poly));
+  k = (poly*) malloc(sizeof(poly));
+  epp = (poly*) malloc(sizeof(poly));
+
+  unpack_pk(pkpv, seed, pk);
+  poly_frommsg(k, m);
   gen_at(at, seed);
 
   for(i=0;i<KYBER_K;i++)
-    poly_getnoise_eta1(sp.vec+i, coins, nonce++);
+    poly_getnoise_eta1(sp->vec+i, coins, nonce++);
   for(i=0;i<KYBER_K;i++)
-    poly_getnoise_eta2(ep.vec+i, coins, nonce++);
-  poly_getnoise_eta2(&epp, coins, nonce++);
+    poly_getnoise_eta2(ep->vec+i, coins, nonce++);
+  poly_getnoise_eta2(epp, coins, nonce++);
 
-  polyvec_ntt(&sp);
+  polyvec_ntt(sp);
 
   // matrix-vector multiplication
   for(i=0;i<KYBER_K;i++)
-    polyvec_basemul_acc_montgomery(&b.vec[i], &at[i], &sp);
+    polyvec_basemul_acc_montgomery(&b->vec[i], &at[i], sp);
 
-  polyvec_basemul_acc_montgomery(&v, &pkpv, &sp);
+  polyvec_basemul_acc_montgomery(v, pkpv, sp);
 
-  polyvec_invntt_tomont(&b);
-  poly_invntt_tomont(&v);
+  polyvec_invntt_tomont(b);
+  poly_invntt_tomont(v);
 
-  polyvec_add(&b, &b, &ep);
-  poly_add(&v, &v, &epp);
-  poly_add(&v, &v, &k);
-  polyvec_reduce(&b);
-  poly_reduce(&v);
+  polyvec_add(b, b, ep);
+  poly_add(v, v, epp);
+  poly_add(v, v, k);
+  polyvec_reduce(b);
+  poly_reduce(v);
 
-  pack_ciphertext(c, &b, &v);
+  pack_ciphertext(c, b, v);
+
+  free(seed);
+  free(sp);
+  free(pkpv);
+  free(ep);
+  free(at);
+  free(b);
+  free(v);
+  free(k);
+  free(epp);
 }
 
 /*************************************************
@@ -327,18 +346,28 @@ void indcpa_dec(uint8_t m[KYBER_INDCPA_MSGBYTES],
                 const uint8_t c[KYBER_INDCPA_BYTES],
                 const uint8_t sk[KYBER_INDCPA_SECRETKEYBYTES])
 {
-  polyvec b, skpv;
-  poly v, mp;
+  polyvec *b, *skpv;
+  b = (polyvec*) malloc(sizeof(polyvec));
+  skpv = (polyvec*) malloc(sizeof(polyvec));
 
-  unpack_ciphertext(&b, &v, c);
-  unpack_sk(&skpv, sk);
+  poly *v, *mp;
+  v = (poly*) malloc(sizeof(poly));
+  mp = (poly*) malloc(sizeof(poly));
 
-  polyvec_ntt(&b);
-  polyvec_basemul_acc_montgomery(&mp, &skpv, &b);
-  poly_invntt_tomont(&mp);
+  unpack_ciphertext(b, v, c);
+  unpack_sk(skpv, sk);
 
-  poly_sub(&mp, &v, &mp);
-  poly_reduce(&mp);
+  polyvec_ntt(b);
+  polyvec_basemul_acc_montgomery(mp, skpv, b);
+  poly_invntt_tomont(mp);
 
-  poly_tomsg(m, &mp);
+  poly_sub(mp, v, mp);
+  poly_reduce(mp);
+
+  poly_tomsg(m, mp);
+
+  free(b);
+  free(skpv);
+  free(v);
+  free(mp);
 }
