@@ -8,6 +8,8 @@
 #include "randombytes.h"
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /*************************************************
 * Name:        crypto_kem_keypair
@@ -32,6 +34,8 @@ int crypto_kem_keypair(uint8_t *pk,
   hash_h(sk+KYBER_SECRETKEYBYTES-2*KYBER_SYMBYTES, pk, KYBER_PUBLICKEYBYTES);
   /* Value z for pseudo-random output on reject */
   randombytes(sk+KYBER_SECRETKEYBYTES-KYBER_SYMBYTES, KYBER_SYMBYTES);
+  // uint8_t aux[] = {46, 216, 222, 138, 243, 168, 235, 98, 147, 193, 144, 105, 109, 44, 224, 146, 06, 206, 244, 246, 240, 232, 157, 249, 172, 06, 16, 55, 142, 210, 18, 251};
+  // memcpy(sk+KYBER_SECRETKEYBYTES-KYBER_SYMBYTES, &aux, KYBER_SYMBYTES);
   return 0;
 }
 
@@ -58,6 +62,8 @@ int crypto_kem_enc(uint8_t *ct,
   /* Will contain key, coins */
   uint8_t kr[2*KYBER_SYMBYTES];
 
+  // uint8_t aux[] = {9, 213, 140, 84, 62, 200, 241, 254, 53, 233, 77, 67, 53, 145, 45, 237, 67, 93, 47, 43, 166, 100, 211, 135, 174, 04, 149, 07, 205, 64, 91, 25};
+  // memcpy(buf, &aux, KYBER_SYMBYTES);
   randombytes(buf, KYBER_SYMBYTES);
   /* Don't release system RNG output */
   hash_h(buf, buf, KYBER_SYMBYTES);

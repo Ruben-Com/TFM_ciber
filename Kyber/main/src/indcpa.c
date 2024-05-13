@@ -9,6 +9,8 @@
 #include "randombytes.h"
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /*************************************************
 * Name:        pack_pk
@@ -214,6 +216,8 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
   uint8_t nonce = 0;
   polyvec *a, *e, *pkpv, *skpv;
 
+  // uint8_t aux[] = {179, 157, 148, 161, 216, 198, 30, 180, 183, 98, 150, 193, 60, 125, 68, 145, 152, 131, 43, 182, 212, 21, 155, 51, 77, 133, 52, 17, 19, 224, 249, 94};
+  // memcpy(buf, &aux, KYBER_SYMBYTES);
   randombytes(buf, KYBER_SYMBYTES);
   hash_g(buf, buf, KYBER_SYMBYTES);
 
