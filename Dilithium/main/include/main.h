@@ -10,7 +10,7 @@
 #endif
 
 #ifndef DILITHIUM_MODE
-    #define DILITHIUM_MODE 2	/*{2,3,5}*/
+    #define DILITHIUM_MODE 3	/*{2,3,5}*/
 #endif
 
 void printBstr(char *S, unsigned char *A, unsigned long long L);

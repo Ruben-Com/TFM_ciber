@@ -18,9 +18,8 @@ void app_main (void)
     printf("Rand 3  = {9, 213, 140, 84, 62, 200, 241, 254, 53, 233, 77, 67, 53, 145, 45, 237, 67, 93, 47, 43, 166, 100, 211, 135, 174, 04, 149, 07, 205, 64, 91, 25}");
 
     //Generación de claves
-    unsigned char *pk, *sk;
-    pk = (unsigned char*) malloc(CRYPTO_PUBLICKEYBYTES * sizeof(unsigned char));
-    sk = (unsigned char*) malloc(CRYPTO_SECRETKEYBYTES * sizeof(unsigned char));
+    unsigned char *pk = (unsigned char*) malloc(CRYPTO_PUBLICKEYBYTES * sizeof(unsigned char));
+    unsigned char *sk = (unsigned char*) malloc(CRYPTO_SECRETKEYBYTES * sizeof(unsigned char));
 
     if (crypto_kem_keypair(pk, sk) != 0) {
         printf("Generacion de claves fallida\n\r");
@@ -35,9 +34,8 @@ void app_main (void)
 
 
     //Generación de texto cifrado y secreto compartido
-    unsigned char *ct, *ss_pub;
-    ct = (unsigned char*) malloc(CRYPTO_CIPHERTEXTBYTES * sizeof(unsigned char));
-    ss_pub = (unsigned char*) malloc(CRYPTO_BYTES * sizeof(unsigned char));
+    unsigned char *ct = (unsigned char*) malloc(CRYPTO_CIPHERTEXTBYTES * sizeof(unsigned char));
+    unsigned char *ss_pub = (unsigned char*) malloc(CRYPTO_BYTES * sizeof(unsigned char));
 
     if (crypto_kem_enc(ct, ss_pub, pk) != 0) {
         printf("Generacion de texto cifrado y secreto compartido fallida\n\r");
@@ -54,8 +52,7 @@ void app_main (void)
 
 
     //Generación de secreto compartido
-    unsigned char *ss_priv;
-    ss_priv = (unsigned char*) malloc(CRYPTO_BYTES * sizeof(unsigned char));
+    unsigned char *ss_priv = (unsigned char*) malloc(CRYPTO_BYTES * sizeof(unsigned char));
 
     if (crypto_kem_dec(ss_priv, ct, sk) != 0) {
         printf("Generacion de secreto compartido fallida\n\r");

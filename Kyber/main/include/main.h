@@ -10,7 +10,7 @@
 #endif
 
 #ifndef KYBER_K
-    #define KYBER_K 4	/*{2,3,4}*/
+    #define KYBER_K 3	/*{2,3,4}*/
 #endif
 
 void printBstr(char *S, unsigned char *A, unsigned long long L);

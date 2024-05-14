@@ -209,22 +209,20 @@ void indcpa_keypair(uint8_t pk[KYBER_INDCPA_PUBLICKEYBYTES],
                     uint8_t sk[KYBER_INDCPA_SECRETKEYBYTES])
 {
   unsigned int i;
-  uint8_t *buf;
-  buf = (uint8_t*) malloc(2*KYBER_SYMBYTES * sizeof(uint8_t));
+  uint8_t *buf = (uint8_t*) malloc(2*KYBER_SYMBYTES * sizeof(uint8_t));
   const uint8_t *publicseed = buf;
   const uint8_t *noiseseed = buf+KYBER_SYMBYTES;
   uint8_t nonce = 0;
-  polyvec *a, *e, *pkpv, *skpv;
+
+  polyvec *a = (polyvec*) malloc(KYBER_K * sizeof(polyvec));
+  polyvec *e = (polyvec*) malloc(sizeof(polyvec));
+  polyvec *pkpv = (polyvec*) malloc(sizeof(polyvec));
+  polyvec *skpv = (polyvec*) malloc(sizeof(polyvec));
 
   // uint8_t aux[] = {179, 157, 148, 161, 216, 198, 30, 180, 183, 98, 150, 193, 60, 125, 68, 145, 152, 131, 43, 182, 212, 21, 155, 51, 77, 133, 52, 17, 19, 224, 249, 94};
   // memcpy(buf, &aux, KYBER_SYMBYTES);
   randombytes(buf, KYBER_SYMBYTES);
   hash_g(buf, buf, KYBER_SYMBYTES);
-
-  a = (polyvec*) malloc(KYBER_K * sizeof(polyvec));
-  e = (polyvec*) malloc(sizeof(polyvec));
-  pkpv = (polyvec*) malloc(sizeof(polyvec));
-  skpv = (polyvec*) malloc(sizeof(polyvec));
 
   gen_a(a, publicseed);
 
@@ -277,21 +275,18 @@ void indcpa_enc(uint8_t c[KYBER_INDCPA_BYTES],
                 const uint8_t coins[KYBER_SYMBYTES])
 {
   unsigned int i;
-  uint8_t *seed;
-  seed = (uint8_t*) malloc(KYBER_SYMBYTES * sizeof(uint8_t));
+  uint8_t *seed = (uint8_t*) malloc(KYBER_SYMBYTES * sizeof(uint8_t));
   uint8_t nonce = 0;
 
-  polyvec *sp, *pkpv, *ep, *at, *b;
-  sp = (polyvec*) malloc(sizeof(polyvec));
-  pkpv = (polyvec*) malloc(sizeof(polyvec));
-  ep = (polyvec*) malloc(sizeof(polyvec));
-  at = (polyvec*) malloc(KYBER_K * sizeof(polyvec));
-  b = (polyvec*) malloc(sizeof(polyvec));
+  polyvec *sp   = (polyvec*) malloc(sizeof(polyvec));
+  polyvec *pkpv = (polyvec*) malloc(sizeof(polyvec));
+  polyvec *ep   = (polyvec*) malloc(sizeof(polyvec));
+  polyvec *at   = (polyvec*) malloc(KYBER_K * sizeof(polyvec));
+  polyvec *b    = (polyvec*) malloc(sizeof(polyvec));
 
-  poly *v, *k, *epp;
-  v = (poly*) malloc(sizeof(poly));
-  k = (poly*) malloc(sizeof(poly));
-  epp = (poly*) malloc(sizeof(poly));
+  poly *v   = (poly*) malloc(sizeof(poly));
+  poly *k   = (poly*) malloc(sizeof(poly));
+  poly *epp = (poly*) malloc(sizeof(poly));
 
   unpack_pk(pkpv, seed, pk);
   poly_frommsg(k, m);
@@ -350,13 +345,11 @@ void indcpa_dec(uint8_t m[KYBER_INDCPA_MSGBYTES],
                 const uint8_t c[KYBER_INDCPA_BYTES],
                 const uint8_t sk[KYBER_INDCPA_SECRETKEYBYTES])
 {
-  polyvec *b, *skpv;
-  b = (polyvec*) malloc(sizeof(polyvec));
-  skpv = (polyvec*) malloc(sizeof(polyvec));
+  polyvec *b    = (polyvec*) malloc(sizeof(polyvec));
+  polyvec *skpv = (polyvec*) malloc(sizeof(polyvec));
 
-  poly *v, *mp;
-  v = (poly*) malloc(sizeof(poly));
-  mp = (poly*) malloc(sizeof(poly));
+  poly *v  = (poly*) malloc(sizeof(poly));
+  poly *mp = (poly*) malloc(sizeof(poly));
 
   unpack_ciphertext(b, v, c);
   unpack_sk(skpv, sk);
