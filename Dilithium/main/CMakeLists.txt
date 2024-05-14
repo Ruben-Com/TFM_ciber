@@ -1,3 +1,2 @@
-idf_component_register(SRCS "rng.c" "PQCgenKAT_sign.c" "main.c" "sign.c" "packing.c" "polyvec.c" "poly.c" "ntt.c" "reduce.c" "rounding.c" "symmetric-shake.c" "symmetric-aes.c" "fips202.c" "aes256ctr.c" "randombytes.c"
-                    INCLUDE_DIRS "$ENV{IDF_PATH}/components/esp_hw_support/include/" 
-                    "$ENV{IDF_PATH}/components/bootloader_support/include/")
+idf_component_register(SRCS "main.c" "./src/sign.c" "./src/packing.c" "./src/polyvec.c" "./src/poly.c" "./src/ntt.c" "./src/reduce.c" "./src/rounding.c" "./src/symmetric-shake.c" "./src/symmetric-aes.c" "./src/fips202.c" "./src/aes256ctr.c" "./src/randombytes.c"
+                    INCLUDE_DIRS "include")

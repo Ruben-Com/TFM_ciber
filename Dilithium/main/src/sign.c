@@ -8,6 +8,8 @@
 #include "symmetric.h"
 #include "fips202.h"
 
+#include <stdio.h>
+
 /*************************************************
 * Name:        crypto_sign_keypair
 *
@@ -24,9 +26,12 @@ int crypto_sign_keypair(uint8_t *pk, uint8_t *sk) {
   uint8_t seedbuf[2*SEEDBYTES + CRHBYTES];
   uint8_t tr[SEEDBYTES];
   const uint8_t *rho, *rhoprime, *key;
-  polyvecl mat[K];
-  polyvecl s1, s1hat;
-  polyveck s2, t1, t0;
+  polyvecl *mat = (polyvecl*) malloc(K * sizeof(polyvecl));
+  polyvecl *s1 = (polyvecl*) malloc( sizeof(polyvecl));
+  polyvecl *s1hat = (polyvecl*) malloc( sizeof(polyvecl));
+  polyveck *s2 = (polyveck*) malloc( sizeof(polyveck));
+  polyveck *t1 = (polyveck*) malloc( sizeof(polyveck));
+  polyveck *t0 = (polyveck*) malloc( sizeof(polyveck));
 
   /* Get randomness for rho, rhoprime and key */
   randombytes(seedbuf, SEEDBYTES);
@@ -39,27 +44,34 @@ int crypto_sign_keypair(uint8_t *pk, uint8_t *sk) {
   polyvec_matrix_expand(mat, rho);
 
   /* Sample short vectors s1 and s2 */
-  // polyvecl_uniform_eta(&s1, rhoprime, 0);
-  // polyveck_uniform_eta(&s2, rhoprime, L);
+  polyvecl_uniform_eta(s1, rhoprime, 0);
+  polyveck_uniform_eta(s2, rhoprime, L);
 
   /* Matrix-vector multiplication */
-  // s1hat = s1;
-  // polyvecl_ntt(&s1hat);
-  // polyvec_matrix_pointwise_montgomery(&t1, mat, &s1hat);
-  // polyveck_reduce(&t1);
-  // polyveck_invntt_tomont(&t1);
+  *s1hat = *s1;
+  polyvecl_ntt(s1hat);
+  polyvec_matrix_pointwise_montgomery(t1, mat, s1hat);
+  polyveck_reduce(t1);
+  polyveck_invntt_tomont(t1);
 
-  // /* Add error vector s2 */
-  // polyveck_add(&t1, &t1, &s2);
+  /* Add error vector s2 */
+  polyveck_add(t1, t1, s2);
 
-  // /* Extract t1 and write public key */
-  // polyveck_caddq(&t1);
-  // polyveck_power2round(&t1, &t0, &t1);
-  // pack_pk(pk, rho, &t1);
+  /* Extract t1 and write public key */
+  polyveck_caddq(t1);
+  polyveck_power2round(t1, t0, t1);
+  pack_pk(pk, rho, t1);
 
-  // /* Compute H(rho, t1) and write secret key */
-  // shake256(tr, SEEDBYTES, pk, CRYPTO_PUBLICKEYBYTES);
-  // pack_sk(sk, rho, tr, key, &t0, &s1, &s2);
+  /* Compute H(rho, t1) and write secret key */
+  shake256(tr, SEEDBYTES, pk, CRYPTO_PUBLICKEYBYTES);
+  pack_sk(sk, rho, tr, key, t0, s1, s2);
+
+  free(mat);
+  free(s1);
+  free(s1hat);
+  free(s2);
+  free(t1);
+  free(t0);
 
   return 0;
 }
