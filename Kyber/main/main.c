@@ -41,6 +41,8 @@ void app_main (void)
 
     if (crypto_kem_enc(ct, ss_pub, pk) != 0) {
         printf("Generacion de texto cifrado y secreto compartido fallida\n\r");
+        free(pk);
+        free(sk);
         free(ct);
         free(ss_pub);
         return;
@@ -57,6 +59,10 @@ void app_main (void)
 
     if (crypto_kem_dec(ss_priv, ct, sk) != 0) {
         printf("Generacion de secreto compartido fallida\n\r");
+        free(pk);
+        free(sk);
+        free(ct);
+        free(ss_pub);
         free(ss_priv);
         return;
     } else {

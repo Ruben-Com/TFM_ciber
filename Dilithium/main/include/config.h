@@ -1,6 +1,8 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#include "main.h"
+
 //#define DILITHIUM_MODE 2
 //#define DILITHIUM_USE_AES
 //#define DILITHIUM_RANDOMIZED_SIGNING

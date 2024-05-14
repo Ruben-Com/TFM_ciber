@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include "randombytes.h"
+#include "main.h"
 
 #undef __linux__
 #define ESP32
