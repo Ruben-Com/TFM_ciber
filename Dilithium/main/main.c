@@ -26,8 +26,7 @@ void app_main(void)
 
 
     //Firma de mensaje
-    // uint8_t *m = (uint8_t *)calloc(mlen, sizeof(uint8_t));
-    uint8_t m[] = "Esto es una prueba de la firma de mensajes utilizando Dilithium.\n\r";
+    uint8_t m[] = "Esto es una prueba de la firma de mensajes utilizando Dilithium.";
     size_t mlen = sizeof(m), smlen;
     uint8_t *sm = (uint8_t *)calloc(mlen+CRYPTO_BYTES, sizeof(uint8_t));
 
@@ -46,6 +45,7 @@ void app_main(void)
     //Comprobación de la firma
     size_t mlen1;
     uint8_t *m1 = (uint8_t *)calloc(mlen+CRYPTO_BYTES, sizeof(uint8_t));
+
     if (crypto_sign_open(m1, &mlen1, sm, smlen, pk) != 0) {
         printf("Comprobacion de la firma fallida\n\r");
         free(pk);
@@ -53,12 +53,12 @@ void app_main(void)
         free(sm);
         free(m1);
         return;
-    } else{
+    } else {
         if (mlen != mlen1) {
             printf("Longitud del mensaje original distinta a la longitud del mensaje recuperado\n\r");
             return;
         } else if (memcmp(m, m1, mlen)) {
-            printf("Contenido del mensaje original distint al contenido del mensaje recuperado\n\r");
+            printf("Contenido del mensaje original distinto al contenido del mensaje recuperado\n\r");
             return;
         } else {
             printf("Comprobacion de la firma del mensaje exitosa (%d bytes de mensaje)\n\r", mlen1);
