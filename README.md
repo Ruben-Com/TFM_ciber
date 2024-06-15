@@ -9,3 +9,11 @@ Para este dispositivo se comprobarán los algoritmos Dilithium y Kyber. Estos di
 
 ## RP2040
 Para este dispositivo se comprobará el algoritmo Sphincs. El directorio de este algoritmo se incluye como un ejemplo.
+
+
+
+
+
+## Origen
+Dilithium, Kyber y Sphincs de los repos oficiales.
+McEliece de pqm4.
