@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
 if (TARGET tinyusb_device)
-    set(PARAMS "sphincs-haraka-128f")
-    set(THASH "robust")
-    
     #add_compile_options(-Wall -Wextra -pedantic -Werror -Wpedantic -Wredundant-decls -Wcast-align -Wmissing-prototypes -DPQCLEAN_NAMESPACE=PQCLEAN_MCELIECE348864_CLEAN) #QUITAMOS -O3 -std=c99
 
     add_compile_options(-Wall -Wextra -Wpedantic -Wredundant-decls -Wcast-align -Wmissing-prototypes -DPQCLEAN_NAMESPACE=PQCLEAN_MCELIECE348864_CLEAN)
@@ -31,6 +28,7 @@ if (TARGET tinyusb_device)
             ${CMAKE_CURRENT_LIST_DIR}/src/synd.c
             ${CMAKE_CURRENT_LIST_DIR}/src/transpose.c
             ${CMAKE_CURRENT_LIST_DIR}/src/util.c
+            
             ${CMAKE_CURRENT_LIST_DIR}/src/randombytes.c
             ${CMAKE_CURRENT_LIST_DIR}/src/fips202.c
             )

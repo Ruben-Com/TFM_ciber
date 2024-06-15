@@ -1,19 +1,20 @@
 # TFM_ciber
 
 ## ESP32
-
 Para este dispositivo se comprobarán los algoritmos Dilithium y Kyber. Estos directorios se encuentran inicializados como proyectos de la extensión de Espressif dentro de VScode.
+
+
+
 ## STM32
 
 
 
+
 ## RP2040
-Para este dispositivo se comprobará el algoritmo Sphincs. El directorio de este algoritmo se incluye como un ejemplo.
-
-
+Para este dispositivo se comprobará el algoritmo Sphincs, McEliece348864 y HQC-128. Los directorios de los algoritmos se incluyen como ejemplos.
 
 
 
 ## Origen
 Dilithium, Kyber y Sphincs de los repos oficiales.
-McEliece de pqm4.
+McEliece348864 y HQC-128 de PQClean.

@@ -47,20 +47,54 @@ int main() {
     unsigned char pk[CRYPTO_PUBLICKEYBYTES], sk[CRYPTO_SECRETKEYBYTES];
     // uint8_t *pk, *sk;
 
+    //Generación de texto cifrado y secreto compartido
+    uint8_t ct[CRYPTO_CIPHERTEXTBYTES];
+    uint8_t ss_pub[CRYPTO_BYTES];
+
+    //Generación de secreto compartido
+    uint8_t ss_priv[CRYPTO_BYTES];
+
     while (true) {
 
-        sleep_ms(30000);
+        sleep_ms(10000);
 
         //Generación de claves
         // pk = (uint8_t*) malloc(sizeof(uint8_t) * CRYPTO_PUBLICKEYBYTES);
         // sk = (uint8_t*) malloc(sizeof(uint8_t) * CRYPTO_SECRETKEYBYTES);
 
-        if (crypto_kem_keypair(pk, sk)!= 0){
+        if (crypto_kem_keypair(pk, sk) != 0){
             printf("Generacion de claves fallida\n\r");
         } else {
             printf("Generacion de claves exitosa (%d bytes de clave publica y %d bytes de clave privada)\n\r", CRYPTO_PUBLICKEYBYTES, CRYPTO_SECRETKEYBYTES);
-            // printBstr("Clave publica = ", pk, CRYPTO_PUBLICKEYBYTES);
-            // printBstr("Clave privada = ", sk, CRYPTO_SECRETKEYBYTES);
+            printBstr("Clave publica = ", pk, CRYPTO_PUBLICKEYBYTES);
+            printBstr("Clave privada = ", sk, CRYPTO_SECRETKEYBYTES);
+        }
+
+
+        //Generación de texto cifrado y secreto compartido
+        if (crypto_kem_enc(ct, ss_pub, pk) != 0){
+            printf("Generacion de texto cifrado y secreto compartido fallida\n\r");
+        } else {
+            printf("Generacion de texto cifrado y secreto compartido exitosa (%d bytes de texto cifrado y %d bytes de secreto compartido)\n\r", CRYPTO_CIPHERTEXTBYTES, CRYPTO_BYTES);
+            printBstr("Texto cifrado = ", ct, CRYPTO_CIPHERTEXTBYTES);
+        }
+
+
+        //Generación de secreto compartido
+        if (crypto_kem_dec(ss_priv, ct, sk) != 0) {
+            printf("Generacion de secreto compartido fallida\n\r");
+        } else {
+            printf("Generacion de secreto compartido exitosa (%d bytes de secreto compartido)\n\r", CRYPTO_BYTES);
+            printBstr("Secreto compartido pub  = ", ss_pub, CRYPTO_BYTES);
+            printBstr("Secreto compartido priv = ", ss_priv, CRYPTO_BYTES);
+        }
+
+
+        //Comprobación de resultados
+        if (memcmp(ss_pub, ss_priv, (unsigned int) CRYPTO_BYTES) ) {
+            printf("Comprobación fallida\n\r");
+        } else{
+            printf("¡Comprobación superada!\n\r");
         }
 
         // free(pk);
