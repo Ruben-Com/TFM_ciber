@@ -11,7 +11,7 @@ Para este dispositivo se comprobarán los algoritmos Dilithium y Kyber. Estos di
 
 
 ## RP2040
-Para este dispositivo se comprobará el algoritmo Sphincs, McEliece348864 y HQC-128. Los directorios de los algoritmos se incluyen como ejemplos.
+Para este dispositivo se comprobarán los algoritmos Sphincs, McEliece348864 y HQC-128. Los directorios de los algoritmos se incluyen como ejemplos.
 
 
 
