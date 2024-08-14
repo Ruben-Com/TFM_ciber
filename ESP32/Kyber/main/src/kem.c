@@ -131,5 +131,8 @@ int crypto_kem_dec(uint8_t *ss,
 
   /* hash concatenation of pre-k and H(c) to k */
   kdf(ss, kr, 2*KYBER_SYMBYTES);
+
+  free(cmp);
+
   return 0;
 }
