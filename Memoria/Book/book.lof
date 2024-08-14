@@ -1,0 +1,18 @@
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces ESP32-WROOM-32E en Devkitc v4 con \textit {pinout}~\blx@tocontentsinit {0}\cite {esp32-pinout}.}}{5}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Raspberry Pi Pico~\blx@tocontentsinit {0}\cite {rp2040-img}.}}{6}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrama del dispositivo NUCLEO-L4R5ZI~\blx@tocontentsinit {0}\cite {nucleo-img}.}}{7}{figure.caption.52}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama del dispositivo ESP-Prog~\blx@tocontentsinit {0}\cite {esp-prog-pinout}.}}{11}{figure.caption.77}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Árbol de ficheros del proyecto Dilithium.}}{12}{figure.caption.79}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Árbol de ficheros del proyecto Kyber.}}{18}{figure.caption.299}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Árbol de ficheros del proyecto HQC-128.}}{24}{figure.caption.471}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Árbol de ficheros del proyecto MCEliece348864.}}{29}{figure.caption.621}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Árbol de ficheros del proyecto Sphincs.}}{32}{figure.caption.701}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagrama de Gantt}}{44}{figure.caption.845}%

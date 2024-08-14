@@ -1,0 +1,177 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Generic template for TFC/TFM/TFG/Tesis
+%
+% $Id: presupuesto.tex,v 1.5 2015/06/05 00:10:36 macias Exp $
+%
+% By:
+%  + Javier Macías-Guarasa. 
+%    Departamento de Electrónica
+%    Universidad de Alcalá
+%  + Roberto Barra-Chicote. 
+%    Departamento de Ingeniería Electrónica
+%    Universidad Politécnica de Madrid   
+% 
+% Based on original sources by Roberto Barra, Manuel Ocaña, Jesús Nuevo,
+% Pedro Revenga, Fernando Herránz and Noelia Hernández. Thanks a lot to
+% all of them, and to the many anonymous contributors found (thanks to
+% google) that provided help in setting all this up.
+%
+% See also the additionalContributors.txt file to check the name of
+% additional contributors to this work.
+%
+% If you think you can add pieces of relevant/useful examples,
+% improvements, please contact us at (macias@depeca.uah.es)
+%
+% You can freely use this template and please contribute with
+% comments or suggestions!!!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Temporización y presupuesto}\label{cha:temp_pres}
+
+En este capítulo se incluye la temporización del poryecto y una estimación del coste total para la realización del mismo.
+
+
+\section{PLanificación temporal}\label{sec:plan_temp}
+
+En primer lugar, se indica la organización temporal seguida a lo largo del proyecto mediante el diagrama mostrado en~\ref{fig:diagramaDeGant} de acuerdo a las siguientes tareas:
+
+\begin{enumerate}
+    \item Familiarización con el software Contiki-ng.
+    \item Estudio de la implementación inicial del protocolo.
+    \item Desarrollo de cambios funcionales para añadir adaptabilidad a redes dinámicas.
+    \item Adaptación de la implementación para ejecución en plataformas Raspberry Pi y plataformas soportadas por Contiki-ng.
+    \item Diseño y ejecución de pruebas en el emulador Cooja.
+    \item Diseño y ejecución de pruebas en escenarios utilizando nRF52840-DK y nRF5340-DK.
+    \item Documentación.
+\end{enumerate}
+    
+
+\begin{figure}[ht]
+    \centering
+    \begin{ganttchart}[y unit title=0.8cm,
+    x unit=0.48cm,
+    y unit chart=0.8cm,
+    vgrid,hgrid, 
+    title label anchor/.style={below=-1.6ex},
+    title left shift=.05,
+    title right shift=-.05,
+    title height=1,
+    progress label text={},
+    bar height=0.5,
+    bar top shift=0.25,
+    group right shift=0,
+    group top shift=.6,
+    group height=.3]{1}{30}
+    %labels
+    \gantttitle{Semanas}{30} \\
+    \gantttitlelist{1,...,30}{1} \\
+    % \gantttitle{1er mes}{4} 
+    % \gantttitle{2do mes}{4} 
+    % \gantttitle{3er mes}{4} 
+    % \gantttitle{4to mes}{4} 
+    % \gantttitle{5to mes}{4} 
+    % \gantttitle{6to mes}{4}\\
+    %tasks
+    \ganttbar[bar/.append style={fill=cyan}]{Tarea 1}{1}{4} \\
+    \ganttbar[bar/.append style={fill=cyan}]{Tarea 2}{5}{7} \\
+    \ganttbar[bar/.append style={fill=cyan}]{Tarea 3}{8}{9} \\
+    \ganttbar[bar/.append style={fill=cyan}]{Tarea 4}{10}{14}
+    \ganttbar[bar/.append style={fill=cyan}]{}{20}{21} \\
+    \ganttbar[bar/.append style={fill=cyan}]{Tarea 5}{13}{19} \\
+    \ganttbar[bar/.append style={fill=cyan}]{Tarea 6}{20}{26} \\
+    \ganttbar[bar/.append style={fill=cyan}]{Tarea 7}{27}{30}
+
+    % \ganttgroup{Grupo 3}{1}{17}
+    
+    %relations 
+    % \ganttlink{elem0}{elem1} 
+    %\ganttlink{elem0}{elem1} 
+    %\ganttlink{elem1}{elem2} 
+    
+    %\ganttlink{elem3}{elem5}
+    %\ganttlink[link mid=.75]{elem4}{elem6}
+    
+    % \ganttlink{elem4}{elem7}
+    % \ganttlink{elem6}{elem7}
+    \end{ganttchart}
+    \caption{Diagrama de Gantt}
+    \label{fig:diagramaDeGant}
+\end{figure}
+
+
+\section{Recursos Hardware}\label{sec:presupuesto-hardware}
+
+Para poder llevar a cabo la realización de este proyecto, se han requerido varios dispositivos \textit{hardware}.
+Estos han sido listados a continuación:
+
+\begin{itemize}
+    \item Ordenador de sobremesa.
+    \item nRF5340 dk.
+    \item nRF52840 dk.
+    \item Pilas CR2032.
+    \item CC2531.
+    \item Raspberry Pi 3 model B.
+\end{itemize}
+
+El precio de estos dispositivos se especifica en la tabla~\ref{tab:recursos_hardware} así como el total del coste de los dispositivos \textit{hardware}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Concepto                & Precio por Unidad & Cantidad & Subtotal \\ \hline
+Ordenador de sobremesa  & 2000,00 \euro                & 1        & 2000,00 \euro       \\ \hline
+nRF5340 dk              & 46,06   \euro                & 2        & 92,12   \euro       \\ \hline
+nRF52840 dk             & 47,22   \euro                & 6        & 283,32  \euro       \\ \hline
+CC2531                  & 7,59    \euro                & 1        & 7,59    \euro       \\ \hline
+Pilas CR2032            & 7,99    \euro                & 1        & 7,99    \euro       \\ \hline
+Raspberry Pi 3 model B  & 50,00   \euro                & 2        & 100,00  \euro       \\ \hline
+\multicolumn{3}{|c|}{TOTAL}                                       & 2491,02 \euro       \\ \hline
+\end{tabular}
+\caption{Recursos hardware usados}
+\label{tab:recursos_hardware}
+\end{table}
+
+
+\section{Recursos Humanos}\label{sec:presupuesto-mano}
+
+Es necesario incluir el coste que conlleva la contratación del personal para la ejecución del proyecto.
+En este caso, se ha requerido únicamente 1 ingeniero para llevarlo a cabo.
+Este coste se especfica en la tabla~\ref{tab:recursos_humanos}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Concepto  & Precio por hora & Cantidad de horas & Subtotal \\ \hline
+Ingeniero & 40,00 \euro     & 600               & 24000,00 \euro       \\ \hline
+\multicolumn{3}{|c|}{TOTAL}                     & 24000,00 \euro        \\ \hline
+\end{tabular}
+\caption{Recursos humanos}
+\label{tab:recursos_humanos}
+\end{table}
+
+\section{Presupuesto de ejecución material}\label{sec:presupuesto-material}
+
+Finalmente, una vez se han especificado los distintos costes que se han afrontado para cada ámbito de este trabajo, se debe realizar la suma de los mismos para alcanzar el coste total del proyecto.
+La cuma final se refleja en la tabla~\ref{tab:ejec_material}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Concepto           & Subtotal \\ \hline
+Recursos hardware  & 2491,02  \euro        \\ \hline
+Recursos software  & 0,00     \euro        \\ \hline
+Coste mano de obra & 24000,00 \euro        \\ \hline
+TOTAL              & 26491,02 \euro        \\ \hline
+\end{tabular}
+\caption{Presupuesto de ejecución material}
+\label{tab:ejec_material}
+\end{table}
+
+%%% Local Variables:
+%%% TeX-master: "../book"
+%%% End:

@@ -1,0 +1,652 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{dilithium}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d73f5269a295977070bf92d05cf9415e}{%
+           family={Schwabe},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d73f5269a295977070bf92d05cf9415e}
+      \strng{fullhash}{d73f5269a295977070bf92d05cf9415e}
+      \strng{fullhashraw}{d73f5269a295977070bf92d05cf9415e}
+      \strng{bibnamehash}{d73f5269a295977070bf92d05cf9415e}
+      \strng{authorbibnamehash}{d73f5269a295977070bf92d05cf9415e}
+      \strng{authornamehash}{d73f5269a295977070bf92d05cf9415e}
+      \strng{authorfullhash}{d73f5269a295977070bf92d05cf9415e}
+      \strng{authorfullhashraw}{d73f5269a295977070bf92d05cf9415e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{CRYSTALS}
+      \field{urlday}{21}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pq-crystals.org/dilithium/
+      \endverb
+      \verb{url}
+      \verb https://pq-crystals.org/dilithium/
+      \endverb
+    \endentry
+    \entry{nist_sel}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Selected Algorithms 2022}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://csrc.nist.gov/Projects/post-quantum-cryptography/selected-algorithms-2022
+      \endverb
+      \verb{url}
+      \verb https://csrc.nist.gov/Projects/post-quantum-cryptography/selected-algorithms-2022
+      \endverb
+    \endentry
+    \entry{10.1007/978-3-642-10366-7_35}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=928bcadb00050adca6148fe4cbefc5d7}{%
+           family={Lyubashevsky},
+           familyi={L\bibinitperiod},
+           given={Vadim},
+           giveni={V\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=b63088e6d52b8ebc6003a1880e288050}{%
+           family={Matsui},
+           familyi={M\bibinitperiod},
+           given={Mitsuru},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{928bcadb00050adca6148fe4cbefc5d7}
+      \strng{fullhash}{928bcadb00050adca6148fe4cbefc5d7}
+      \strng{fullhashraw}{928bcadb00050adca6148fe4cbefc5d7}
+      \strng{bibnamehash}{928bcadb00050adca6148fe4cbefc5d7}
+      \strng{authorbibnamehash}{928bcadb00050adca6148fe4cbefc5d7}
+      \strng{authornamehash}{928bcadb00050adca6148fe4cbefc5d7}
+      \strng{authorfullhash}{928bcadb00050adca6148fe4cbefc5d7}
+      \strng{authorfullhashraw}{928bcadb00050adca6148fe4cbefc5d7}
+      \strng{editorbibnamehash}{b63088e6d52b8ebc6003a1880e288050}
+      \strng{editornamehash}{b63088e6d52b8ebc6003a1880e288050}
+      \strng{editorfullhash}{b63088e6d52b8ebc6003a1880e288050}
+      \strng{editorfullhashraw}{b63088e6d52b8ebc6003a1880e288050}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We demonstrate how the framework that is used for creating efficient number-theoretic ID and signature schemes can be transferred into the setting of lattices. This results in constructions of the most efficient to-date identification and signature schemes with security based on the worst-case hardness of problems in ideal lattices. In particular, our ID scheme has communication complexity of around 65,000 bits and the length of the signatures produced by our signature scheme is about 50,000 bits. All prior lattice-based identification schemes required on the order of millions of bits to be transferred, while all previous lattice-based signature schemes were either stateful, too inefficient, or produced signatures whose lengths were also on the order of millions of bits. The security of our identification scheme is based on the hardness of finding the approximate shortest vector to within a factor of {\$}{\backslash}tilde{\{}O{\}}(n^2){\$}in the standard model, while the security of the signature scheme is based on the same assumption in the random oracle model. Our protocols are very efficient, with all operations requiring {\$}{\backslash}tilde{\{}O{\}}(n){\$}time.}
+      \field{booktitle}{Advances in Cryptology -- ASIACRYPT 2009}
+      \field{isbn}{978-3-642-10366-7}
+      \field{title}{Fiat-Shamir with Aborts: Applications to Lattice and Factoring-Based Signatures}
+      \field{year}{2009}
+      \field{pages}{598\bibrangedash 616}
+      \range{pages}{19}
+    \endentry
+    \entry{dilithium_spec}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{CRYSTALS-Dilithium}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pq-crystals.org/dilithium/data/dilithium-specification-round3-20210208.pdf
+      \endverb
+      \verb{url}
+      \verb https://pq-crystals.org/dilithium/data/dilithium-specification-round3-20210208.pdf
+      \endverb
+    \endentry
+    \entry{kyber_spec}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{CRYSTALS-Kyber}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pq-crystals.org/kyber/data/kyber-specification-round3-20210131.pdf
+      \endverb
+      \verb{url}
+      \verb https://pq-crystals.org/kyber/data/kyber-specification-round3-20210131.pdf
+      \endverb
+    \endentry
+    \entry{esp32-spec}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{ESP32­WROOM­32E ESP32­WROOM­32UE Datasheet}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf
+      \endverb
+    \endentry
+    \entry{esp32-pinout}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{PLACA ESP32 DEVKITC V4 WIFI+BT 4MB IOT}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.tiendatec.es/electronica/placas-de-desarrollo/1001-placa-esp32-devkit-wifi-bt-4mb-iot-8472496015325.html
+      \endverb
+      \verb{url}
+      \verb https://www.tiendatec.es/electronica/placas-de-desarrollo/1001-placa-esp32-devkit-wifi-bt-4mb-iot-8472496015325.html
+      \endverb
+    \endentry
+    \entry{rp2040-spec}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{RP2040 Datasheet}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
+      \endverb
+      \verb{url}
+      \verb https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
+      \endverb
+    \endentry
+    \entry{rp2040-img}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{RP2040}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html
+      \endverb
+      \verb{url}
+      \verb https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html
+      \endverb
+    \endentry
+    \entry{nucleo-spec}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{STM32L4R5xx STM32L4R7xx STM32L4R9xx}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.st.com/resource/en/datasheet/stm32l4r5vi.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.st.com/resource/en/datasheet/stm32l4r5vi.pdf
+      \endverb
+    \endentry
+    \entry{nucleo-img}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{ST Nucleo L4R5ZI}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.zephyrproject.org/latest/boards/st/nucleo_l4r5zi/doc/index.html
+      \endverb
+      \verb{url}
+      \verb https://docs.zephyrproject.org/latest/boards/st/nucleo_l4r5zi/doc/index.html
+      \endverb
+    \endentry
+    \entry{arduino}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Getting Started with Arduino IDE 2}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2/
+      \endverb
+      \verb{url}
+      \verb https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2/
+      \endverb
+    \endentry
+    \entry{espressif}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Get Started}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#introduction
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#introduction
+      \endverb
+    \endentry
+    \entry{platformio}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{PlatformIO Core (CLI)}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.platformio.org/en/latest/core/index.html
+      \endverb
+      \verb{url}
+      \verb https://docs.platformio.org/en/latest/core/index.html
+      \endverb
+    \endentry
+    \entry{idf-freertos}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{FreeRTOS (IDF)}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/freertos_idf.html
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/freertos_idf.html
+      \endverb
+    \endentry
+    \entry{espressif-install}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Standard Toolchain Setup for Linux and macOS}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/linux-macos-setup.html
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/linux-macos-setup.html
+      \endverb
+    \endentry
+    \entry{esp-prog}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{ESP-Prog}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-dev-kits/en/latest/other/esp-prog/user_guide.html#start-application-development
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-dev-kits/en/latest/other/esp-prog/user_guide.html#start-application-development
+      \endverb
+    \endentry
+    \entry{esp-prog-pinout}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Espressif ESP-Prog ESP32 JTAG Debug Probe – Pinout Diagram}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.circuitstate.com/pinouts/espressif-esp-prog-esp32-jtag-debug-probe-pinout-diagram/
+      \endverb
+      \verb{url}
+      \verb https://www.circuitstate.com/pinouts/espressif-esp-prog-esp32-jtag-debug-probe-pinout-diagram/
+      \endverb
+    \endentry
+    \entry{esp-prog-conn}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Please help me connecting Esp-prog to ESP32-DevkitC-v4}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://esp32.com/viewtopic.php?t=9045
+      \endverb
+      \verb{url}
+      \verb https://esp32.com/viewtopic.php?t=9045
+      \endverb
+    \endentry
+    \entry{github-dilithium}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Dilithium}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/pq-crystals/dilithium/tree/master
+      \endverb
+      \verb{url}
+      \verb https://github.com/pq-crystals/dilithium/tree/master
+      \endverb
+    \endentry
+    \entry{esp32-random}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Random Number Generation}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/random.html
+      \endverb
+      \verb{url}
+      \verb https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/random.html
+      \endverb
+    \endentry
+    \entry{esp32-forum1}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Guru Meditation Error: Core 0 panic'ed (LoadProhibited). Exception was unhandled.}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.esp32.com/viewtopic.php?t=19135
+      \endverb
+      \verb{url}
+      \verb https://www.esp32.com/viewtopic.php?t=19135
+      \endverb
+    \endentry
+    \entry{esp32-forum2}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Troubleshooting Double Exception}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.esp32.com/viewtopic.php?t=27538
+      \endverb
+      \verb{url}
+      \verb https://www.esp32.com/viewtopic.php?t=27538
+      \endverb
+    \endentry
+    \entry{github-kyber}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Kyber}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/pq-crystals/kyber
+      \endverb
+      \verb{url}
+      \verb https://github.com/pq-crystals/kyber
+      \endverb
+    \endentry
+    \entry{lilygo}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{LilyGO T-Display RP2040}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/Xinyuan-LilyGO/LILYGO-T-display-RP2040/tree/main
+      \endverb
+      \verb{url}
+      \verb https://github.com/Xinyuan-LilyGO/LILYGO-T-display-RP2040/tree/main
+      \endverb
+    \endentry
+    \entry{pico-sdk}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Raspberry Pi Documentation}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.raspberrypi.com/documentation/pico-sdk/
+      \endverb
+      \verb{url}
+      \verb https://www.raspberrypi.com/documentation/pico-sdk/
+      \endverb
+    \endentry
+    \entry{pico-sdk-github}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Raspberry Pi Pico SDK}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/raspberrypi/pico-sdk
+      \endverb
+      \verb{url}
+      \verb https://github.com/raspberrypi/pico-sdk
+      \endverb
+    \endentry
+    \entry{SSR:KSSW22}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=7803ff80a3ae380b32a5c87ab28e6f99}{%
+           family={Kannwischer},
+           familyi={K\bibinitperiod},
+           given={Matthias\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d73f5269a295977070bf92d05cf9415e}{%
+           family={Schwabe},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3a8502de61eb320277cd5ba32a784d2a}{%
+           family={Stebila},
+           familyi={S\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c41728d5f4d0882ba14e8bc2d978b9b2}{%
+           family={Wiggers},
+           familyi={W\bibinitperiod},
+           given={Thom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Los Alamitos, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society}%
+      }
+      \strng{namehash}{a38d3f71d66cb422c6c6a328de190154}
+      \strng{fullhash}{864e9dddc46f90e95e924a2ba76e822e}
+      \strng{fullhashraw}{864e9dddc46f90e95e924a2ba76e822e}
+      \strng{bibnamehash}{864e9dddc46f90e95e924a2ba76e822e}
+      \strng{authorbibnamehash}{864e9dddc46f90e95e924a2ba76e822e}
+      \strng{authornamehash}{a38d3f71d66cb422c6c6a328de190154}
+      \strng{authorfullhash}{864e9dddc46f90e95e924a2ba76e822e}
+      \strng{authorfullhashraw}{864e9dddc46f90e95e924a2ba76e822e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{IEEE} European Symposium on Security and Privacy, EuroS{\&}P 2022 - Workshops, Genoa, Italy, June 6-10, 2022}
+      \field{title}{Improving Software Quality in Cryptography Standardization Projects}
+      \field{year}{2022}
+      \field{pages}{19\bibrangedash 30}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/EuroSPW55150.2022.00010
+      \endverb
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2022/337
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2022/337
+      \endverb
+    \endentry
+    \entry{pqclean-github}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{PQClean}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/PQClean/PQClean
+      \endverb
+      \verb{url}
+      \verb https://github.com/PQClean/PQClean
+      \endverb
+    \endentry
+    \entry{add-compile-options}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{add compile options}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cmake.org/cmake/help/latest/command/add_compile_options.html
+      \endverb
+      \verb{url}
+      \verb https://cmake.org/cmake/help/latest/command/add_compile_options.html
+      \endverb
+    \endentry
+    \entry{get-rand-32}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{High Level APIs}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.raspberrypi.com/documentation/pico-sdk/high_level.html#gac446d739bd6818ee25b5c8644ef7c8e8
+      \endverb
+      \verb{url}
+      \verb https://www.raspberrypi.com/documentation/pico-sdk/high_level.html#gac446d739bd6818ee25b5c8644ef7c8e8
+      \endverb
+    \endentry
+    \entry{sphincs-github}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{SPHINCS+}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/sphincs/sphincsplus
+      \endverb
+      \verb{url}
+      \verb https://github.com/sphincs/sphincsplus
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

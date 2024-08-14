@@ -1,0 +1,189 @@
+\chapter{Diseño de la propuesta}\label{cha:diseño}
+
+En este capítulo se va a proceder a explicar la implementación desde la que se parte al inicio del proyecto y a mostrar la necesidad de las mejoras implementadas.
+
+\section{Análisis de la implementación inicial}\label{sec:analisis}
+
+Esta implementación está realizada utilizando el sistema operativo Contiki-NG, por lo que, para llevar a cabo la comprobación de su funcionamiento, se requiere utilizar el emulador Cooja.
+
+\subsection{Mensajes}\label{subsec:mensajes}
+
+En esta implementación inicial, se utilizan cuatro tipos de mensajes distintos:
+
+\begin{itemize}
+    \item \textbf{Hello}: Se utiliza para dar a conocer la existencia del nodo.
+    \item \textbf{SetHLMAC}: Es el mensaje utilizado para la propagación de las etiquetas asignadas a cada nodo.
+    \item \textit{\textbf{Load}}: Este mensaje informa al resto de nodos sobre la carga de la que dispone el nodo emisor.
+    \item \textit{\textbf{Share}}: Este mensaje informa al resto de nodos sobre la carga sobrante o requerida en el nodo emisor.
+\end{itemize}
+
+Todos estos mensajes son enviados a través de \textit{broadcast} y, en la recepción, no se trata ninguno que sea \textit{unicast}.
+Esto se realiza mediante el código mostrado en~\ref{lst:broadcast}.
+En él, se muestra la función \texttt{iotorii\_operation}, la cual comprueba si un mensaje es \textit{broadcast} y, en caso afirmativo, se comprueba la longitud del mismo.
+Si la longitud es 0, quiere decir que el mensaje es un \textit{Hello} y, si no, puede ser o una asignación o un mensaje de carga (\textit{Load} o \textit{Share}).
+En caso de ser \textit{unicast}, el paquete se descarta.
+
+\begin{lstlisting}[label={lst:broadcast},language=C,style=Cnice,firstnumber=1,caption={Tratamiento de mensajes \textit{broadcast} únicamente.}]
+    void iotorii_operation (void)
+    {
+        if (packetbuf_holds_broadcast())
+        {
+            if (packetbuf_datalen() == 0) //SI LA LONGITUD ES NULA, SE HA RECIBIDO UN PAQUETE HELLO
+                iotorii_handle_incoming_hello(); //SE PROCESA PAQUETE HELLO
+        
+            else //SI NO ES NULA, SE HA RECIBIDO UN PAQUETE SETHLMAC O DE CARGA
+                iotorii_handle_incoming_sethlmac_or_load(); //SE PROCESA PAQUETE
+        }
+    }
+\end{lstlisting}
+
+Dentro de la función \texttt{iotorii\_handle\_incoming\_sethlmac\_or\_load}, se distingue entre las asginaciones y los mensajes de carga según si en el mensaje se incluye una asignación al nodo.
+Si es así, será un asignación mientras que, sino, será un mensaje de carga.
+Para diferenciar entre los mensajes de carga se utilizan varios \textit{flags}, tal y como se muestra en el algoritmo~\ref{alg:iotorii_handle_incoming_sethlmac_or_load}.
+
+\begin{algorithm}
+    \caption{Función \texttt{iotorii\_handle\_incoming\_sethlmac\_or\_load}.}
+    \label{alg:iotorii_handle_incoming_sethlmac_or_load}
+    \eIf{Asignación no incluida}{
+        \eIf{start\_load == 1 and msg\_share\_on == 0}{
+            Almacena el valor $Load$ recibido\;
+        }{
+            \If{msg\_share\_on == 1}{
+                n\_hijos--\;
+                \If{n\_hijos == 0}{
+                    new\_edge = 1\;
+                }
+            }
+        }
+    }{
+        \If{No hay bucle}{
+            \eIf{Se almacena HLMAC}{
+                Se propaga HLMAC\;
+                flag\_vecino = 1\;
+            }{
+                flag\_vecino = -1\;
+            }
+            number\_of\_neighbours\_flag--\;
+        }
+    }
+\end{algorithm}
+
+Uno de estos \textit{flags} (\texttt{start\_load}) se activa al llevar a cabo la medición de las estadísticas, lo cual se utiliza para conocer si el nodo es \textit{edge} (1) o no.
+Otro \textit{flag} utilizado es \texttt{msg\_share\_on}, al cual se le asigna 1 al haber recibido los mensajes \textit{Load} de todos sus hijos.
+Cada \textit{flag} \texttt{flag\_vecino} está asociado a un vecino concreto e indica que el vecino es padre (1 (almacena la HLMAC que le envía) y -1 (no almacena la HLMAC que le envía)).
+El \textit{flag} \texttt{number\_of\_neighbours\_flag} indica el número de vecinos de los cuáles se ha recibido asignación y se utiliza para saber si el nodo es \textit{edge} (\texttt{number\_of\_neighbours\_flag} vale 0) o no.
+
+
+\subsection{Temporización}\label{subsec:temporizadores}
+
+Para poder conocer la eficiencia de la implementación inicial en cuanto a tiempo de convergencia, se  llevado a cabo una emulación de la misma.
+La emulación que se ha llevado a cabo ha sido con la topología mostrada en la figura~\ref{fig:topology}.
+En esta topología, el nodo \textit{root} será el nodo 1.
+Por un lado, los nodos 1, 5, 6 y 7 están dentro de sus respectivos rangos de transmisión, por lo que pueden recibir los mensajes que envía cualquiera de ellos.
+Por otro lado, el nodo 2 se encuentra al alcance de los nodos 1, 3 y 4, pero no 5, 6 y 7 ni 8 y 10.
+El nodo 3 puede recibir los mensajes de los nodos 2, 4 y 8 pero no del 9 ni del 10.
+El nodo 4 puede recibir los mensajes de los nodos 2, 3 y 10 pero no del 8 ni del 9.
+Finalmente, el nodo 9 podrá comunicarse únicamente con los nodos 8 y 10.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/topology.jpg}
+    \caption{Topología utilizada para comprobar el funcionamiento de la implementación inicial.}
+    \label{fig:topology}
+\end{figure}
+
+Al ejecutar el protocolo, se obtiene que se envían los mensajes mostrados en la captura~\ref{fig:timeline}.
+En esta captura, los mensajes están representados de forma cronológica de izquierda a derecha.
+En los rectángulos indicados se han producido todos los mensajes de un determinado tipo.
+En el amarillo se encuentran todos los mensajes Hello, en el naranja todos los SetHLMAC, en azul todos los \textit{Load} y en marrón los \textit{Share}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/timeline.jpg}
+    \caption{Envío de mensajes durante la ejecución del protocolo.}
+    \label{fig:timeline}
+\end{figure}
+
+Como se puede observar en la figura~\ref{fig:timeline}, el envío de los mensajes \textit{Hello} sucede en un corto período de tiempo, la propagación de las asignaciones es práctimante inmediata pero los mensajes \textit{Load} están espaciados entre sí y los mensajes \textit{Share} todavía más.
+Esto se debe a que el protocolo emplea temporizadores para el envío de los distintos mensajes.
+El uso de estos temporizadores está mostrado en el diagrama mostrado en la figura~\ref{fig:timers-inicial}.
+Dicho diagrama corresponde a los nodos comunes.
+En el caso del nodo \textit{root}, existe un temporizador extra para generar la asignación al encendido del dispositivo.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/inicial.png}
+    \caption{Diagrama sobre el uso de temporizadores en la implementación original.}
+    \label{fig:timers-inicial}
+\end{figure}
+%ROOT igual pero con programación de asignación en el inicio y sin envío de Share
+
+En el caso del envío del mensaje \textit{Load}, se realiza una distinción entre si el nodo es \textit{edge} o no.
+Si es \textit{edge}, el temporizador de este mensaje será de 3 segundos, mientras que, si no es edge, este temporizador se programa con un número entero de segundos comprendidos entre 0 y 8 ambos incluidos.
+Este factor hace que la ejecución del protocolo sea excesivamente lenta.
+
+Por otro lado, en esta implementación únicamente se ejecuta el protocolo una vez ya que los temporizadores de envío de \textit{Hello} y asignación se programan únicamente al inicio de la ejecución. 
+Debido a esto, al llevar a cabo todo el intercambio de mensajes, los nodos imprimen las estadísticas de la ejecución, es decir, la carga propia y de sus vecinos.
+En esta iteración, se ha formado el árbol formado en la figura~\ref{subfig:initial_tree} en la cual el nodo \textit{root} aparece en rojo, los nodos \textit{edge} en azul y los intermedios en verde.
+Este árbol se obtiene de las \acp{HLMAC} almacenadas por cada uno de los nodos, lo cuál se puede comprobar en la captura~\ref{subfig:initial_hlmacs}.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/hlmacs.jpg}
+        \caption{\acp{HLMAC} almacenadas en la ejecución del protocolo.}
+        \label{subfig:initial_hlmacs}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/edge.jpg}
+        \caption{Nodos \textit{edge} detectados en la implementación inicial.}
+        \label{subfig:initial_edge}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.75\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/initial_tree.png}
+        \caption{Árbol generado y nodos \textit{edge} detectados.}
+        \label{subfig:initial_tree}
+    \end{subfigure}
+       \caption{Resultado de la implementación inicial del protocolo.}
+       \label{fig:initial_result}
+\end{figure}
+
+A lo largo de esta ejecución se han intercambiado un total de 40 mensajes para completar la convergencia.
+Cada uno de los nodos ha enviado su correspondiente mensaje \textit{Hello}, \textit{SetHLMAC}, \textit{Load} y \textit{Share}.
+La longitud de estos mensajes es fija en el caso de los mensajes \textit{Hello} (17 bytes), \textit{Load} (25 bytes) y \textit{Share} (21 bytes), ya que la información que intercambian no varía en tamaño.
+En cambio, los mensajes \textit{SetHLMAC} según el número de vecinos de los que disponga.
+Por ejemplo, el nodo 1 envía una asignación de 55 bytes ya que cuenta con 4 vecinos mientras que los nodos 8 y 10 únicamente 31 bytes pese a indicar un prefijo de \ac{HLMAC} más grande ya que solo cuentan con 2 vecinos.
+El tamaño de la asignación que envía cada nodo se puede comprobar en la figura~\ref{fig:radio_sethlmac_size}, donde la columna \textit{From} indica el destinatario y el inicio de cada entraada de la columna \textit{Data} indica el tamaño.
+En dicha figura se puede apreciar como el tamaño de la asignación se encuentra directamente relacionada con el número de vecinos de los que dispone cada nodo.
+También, se puede comprobar que, a igual número de vecinos pero diferente número de saltos hasta el nodo \textit{root}, la asignación es un byte mayor por cada salto hasta el nodo raíz.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/radio_sethlmac_size.jpg}
+    \caption{Tamaño de las asignaciones enviadas.}
+    \label{fig:radio_sethlmac_size}
+\end{figure}
+
+Por último, no se lleva a cabo la comprobación de que existan vecinos a la hora de realizar las estadísticas, sino que se accede directamente a la memoria correspondiente.
+Es por ello que, si un nodo permanece desconectado del resto de la topología, el programa intentaría acceder a memoria no existente, arrojando así un error.
+
+\section{Mejoras a implementar}\label{sec:mejoras}
+
+En esta sección se van a especificar las mejoras que se han percibido como necesarias implementar a raíz del análisis de la implementación inicial.
+
+En primer lugar, se requiere llevar a cabo una modificación de forma que el protocolo se ejecute de forma periódica y no una única vez.
+Esto incluye la periodicidad del envío de la fase de descubrimiento para todos los nodos y la asignación de nuevas \acp{HLMAC} por parte del nodo \textit{root}.
+Al realizar nuevas asignaciones de \acp{HLMAC}, es necesario disponer de un mecanismo que permita la actualización de las mismas en los nodos comunes pertenecientes a la topología.
+
+Por otro lado, dado que los mensajes de carga únicamente deben ser conocidos por el nodo padre para el correcto funcionamiento del protocolo, se modificará el envío de estos paquetes para que se realicen mediante \textit{unicast}.
+También, se deberá eliminar la restricción de analizar paquetes únicamente \textit{broadcast} en la recepción, pudiendo así tratar también los paquetes \textit{unicast}. 
+
+Además, dado que el protocolo únicamente se ejecuta una vez en la implementación original, los nodos no cuentan con mecanismos para actualizar los datos de los vecinos ni de adaptarse en caso de cambiar de posición.
+Por ello, se incorporará un mecanismo que permita adaptar los datos de los nodos a la presencia de nuevos vecinos o ausencia de los ya registrados.
+
+Por último, se corregirá el acceso indebido a memoria en el caso de que un nodo se encuentre sin ningún vecino.
