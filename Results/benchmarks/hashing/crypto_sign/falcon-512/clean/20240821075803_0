@@ -1,0 +1,12 @@
+keypair cycles:
+290360445
+keypair hash cycles:
+48482877
+sign cycles:
+64110189
+sign hash cycles:
+249196
+verify cycles:
+910057
+verify hash cycles:
+237894
