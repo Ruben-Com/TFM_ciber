@@ -24,7 +24,7 @@
 
 \chapter{Desarrollo}\label{cha:desarrollo}
 
-\section{Introducción}\label{sec:introduccion-desarrollo}
+%\section{Introducción}\label{sec:introduccion-desarrollo}
 
 En este capítulo se va a proceder a detallar el proceso llevado a cabo para alcanzar el objetivo de este trabajo.
 
@@ -1406,6 +1406,14 @@ elseif(PICO_ON_DEVICE)
 endif()
 \end{lstlisting}
 
+En este proyecto, para modificar la versión del algoritmo utilizada, se debe modificar el archivo \texttt{Sphincs/CMakeLists.txt}.
+Más concretamente, se debe cambiar el parámetro \texttt{PARAMS} de forma que especifique la función \textit{hash} utilizada (haraka o sha2), el número de bits a emplear (128, 192 o 256) y las opciones (s o f).
+También, se puede elegir entre el archivo \texttt{/src/thash\_(función hash)\_robust.c} o \texttt{/src/thash\_(función hash)\_simple.c}.
+En caso de seleccionar una función \textit{hash} distinta a haraka, se deben alterar las inclusiones \texttt{/src/haraka.c}, \texttt{/src/haraka.c} y \texttt{src/hash\_haraka.c}.
+Para utilizar la función sha2, se debe sustituir ``haraka'' por ``sha2'' en el nombre de dichos archivos.
+Para el caso de la función shake, se debe sustituir ``haraka'' por ``shake'' en el nombre de dichos archivos excepto \texttt{/src/haraka.c}, el cual se debe cambiar por \texttt{/src/fips202.c}
+
+
 \subsubsection{Generación de números aleatorios}\label{subsubsec:sphincs-random}
 
 Para la generación de números aleatorios, se ha utilizado el archivo \texttt{randombytes.c}, sustituyendo al inicialmente empleado \texttt{rng.c} ya que este se basaba en realizar operaciones a nivel de bit.
@@ -1512,10 +1520,43 @@ Finalmente, se ha llevado a cabo la ejecución del fichero de comprobación y se
 
 \subsection{Keil uVision5}\label{subsec:keil}
 
+%//TODO: falta explicación de la herramienta
 
+Para poder cargar \textit{software} en el dispositivo, es necesario llevar a cabo la especificación del rango de memoria disponible para la carga del programa.
+Esto se realiza mediante la ventana a \texttt{Cortex-M Target Driver Setup}, a la cual se puede acceder desde la configuración del proyecto y, dentro de ella, el apartado ``Settings'' dentro de la ventana ``Utilities''.
+Dentro de esta ventana, se debe seleccionar la opción ``Add'' y añadir la opcion con nombre ``STM32L4Rx 2MB Dual Bank Flash'', con dirección de inicio 0x800\_0000 y tamaño 0x20\_0000.
+También, se debe indicar la RAM disponible para el algoritmo.
+Esta comienza en la dirección de memoria 0x2000\_0000 y con un tamaño 0xA\_0000.
 
 \subsection{McEliece348864}\label{subsec:mceliece-stm}
 
+Para la ejecución del algoritmo McEliece348864, en primer lugar, se requiere la selección del código fuente.
+Dicho código fuente se obtiene del repositorio perteneciente al proyecto PQClean~\cite{pqclean-github}.
+
+Una vez se disponga del código, este se incluye en el projecto de ejemplo que se menciona en la Subsección~\ref{subsubsec:stm32-random}.
+
+Por último, se debe llevar a cabo la modificación del archivo 
+
+
+\subsubsection{Generación de números aleatorios}\label{subsubsec:stm32-random}
+
+Para la generación de números aleatorios, se ha utilizado el ejemplo propuesto en el repositorio STM32CubeL4~\cite{stm32cube}.
+Este ejemplo se encuentra en la ruta \texttt{STM32CubeL4/Projects/NUCLEO-L4R5ZI/Examples/RNG/RNG\_MultiRNG}.
+En este ejemplo, se utiliza la función \texttt{HAL\_RNG\_GenerateRandomNumber}, la cual obtiene números aleatorios de 32 bits.
+Por ello, se ha diseñado la función \texttt{randombytes\_stm32\_randombytes} para su uso en el algoritmo.
+Esta función se muestra en el Código~\ref{lst:mceliece-random}.
+
+\begin{lstlisting}[label={lst:mceliece-random},style=Cnice,firstnumber=1,caption={Función de generación de números aleatorios para McEliece348864.}]
+int randombytes_stm32_randombytes(unsigned char *x, unsigned long long xlen){
+    // srand(time(NULL));
+    uint32_t aux = 0;
+    for (int i = 0; i < (int) xlen; i+=4){
+        HAL_RNG_GenerateRandomNumber(&RngHandle, &aux);
+        memcpy(x+i, &aux, min(4, xlen-1));
+    }
+    return 0;
+}
+\end{lstlisting}
 
 
 \subsection{PQM4}\label{subsec:pqm4}

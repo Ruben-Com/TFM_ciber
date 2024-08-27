@@ -1,19 +1,20 @@
-[1] Config.pm:308> INFO - This is Biber 2.20
-[2] Config.pm:311> INFO - Logfile is 'book.blg'
-[657] biber-MSWIN64:340> INFO - === 
-[884] Biber.pm:420> INFO - Reading 'book.bcf'
-[1875] Biber.pm:994> INFO - Found 32 citekeys in bib section 0
-[2079] Biber.pm:4463> INFO - Processing section 0
-[2153] Biber.pm:4654> INFO - Looking for bibtex file 'biblio/biblio.bib' for section 0
-[2396] bibtex.pm:1713> INFO - LaTeX decoding ...
-[3237] bibtex.pm:1519> INFO - Found BibTeX data source 'biblio/biblio.bib'
-[3838] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3838] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3838] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[3839] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[3946] bbl.pm:676> INFO - Writing 'book.bbl' with encoding 'UTF-8'
-[3988] bbl.pm:779> INFO - Output to book.bbl
-[3990] Biber.pm:131> WARN - Possible typo (case mismatch) between datasource keys: 'AMI' and 'ami' in file 'biblio/biblio.bib'
-[3990] Biber.pm:131> WARN - Duplicate entry key: '7366295' in file 'biblio/biblio.bib', skipping ...
-[3990] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Ruben\AppData\Local\Temp\biber_tmp_jQOP\a9e03cb3043b9e2c02591da84105bb68_1096.utf8, line 468, warning: 95 characters of junk seen at toplevel
-[3991] Biber.pm:133> INFO - WARNINGS: 3
+[0] Config.pm:308> INFO - This is Biber 2.20
+[1] Config.pm:311> INFO - Logfile is 'book.blg'
+[428] biber-MSWIN64:340> INFO - === 
+[566] Biber.pm:420> INFO - Reading 'book.bcf'
+[1219] Biber.pm:994> INFO - Found 37 citekeys in bib section 0
+[1333] Biber.pm:4463> INFO - Processing section 0
+[1402] Biber.pm:4654> INFO - Looking for bibtex file 'biblio/biblio.bib' for section 0
+[1596] bibtex.pm:1713> INFO - LaTeX decoding ...
+[2219] bibtex.pm:1519> INFO - Found BibTeX data source 'biblio/biblio.bib'
+[2705] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2705] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2705] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[2705] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[2819] bbl.pm:676> INFO - Writing 'book.bbl' with encoding 'UTF-8'
+[2859] bbl.pm:779> INFO - Output to book.bbl
+[2862] Biber.pm:131> WARN - Possible typo (case mismatch) between datasource keys: 'AMI' and 'ami' in file 'biblio/biblio.bib'
+[2862] Biber.pm:131> WARN - Duplicate entry key: '7366295' in file 'biblio/biblio.bib', skipping ...
+[2862] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'Rietsche2022' is not an integer - this will probably not sort properly.
+[2863] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Ruben\AppData\Local\Temp\biber_tmp_1dk7\a9e03cb3043b9e2c02591da84105bb68_20316.utf8, line 468, warning: 95 characters of junk seen at toplevel
+[2863] Biber.pm:133> INFO - WARNINGS: 4

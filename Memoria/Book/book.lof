@@ -2,17 +2,21 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces ESP32-WROOM-32E en Devkitc v4 con \textit {pinout}~\blx@tocontentsinit {0}\cite {esp32-pinout}.}}{5}{figure.caption.48}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Raspberry Pi Pico~\blx@tocontentsinit {0}\cite {rp2040-img}.}}{6}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrama del dispositivo NUCLEO-L4R5ZI~\blx@tocontentsinit {0}\cite {nucleo-img}.}}{7}{figure.caption.52}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Bit clásico y qubit~\blx@tocontentsinit {0}\cite {Rietsche2022}.}}{3}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces ESP32-WROOM-32E en Devkitc v4 con \textit {pinout}~\blx@tocontentsinit {0}\cite {esp32-pinout}.}}{6}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Raspberry Pi Pico~\blx@tocontentsinit {0}\cite {rp2040-img}.}}{6}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama del dispositivo NUCLEO-L4R5ZI~\blx@tocontentsinit {0}\cite {nucleo-img}.}}{7}{figure.caption.55}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama del dispositivo ESP-Prog~\blx@tocontentsinit {0}\cite {esp-prog-pinout}.}}{11}{figure.caption.77}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Árbol de ficheros del proyecto Dilithium.}}{12}{figure.caption.79}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Árbol de ficheros del proyecto Kyber.}}{18}{figure.caption.299}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Árbol de ficheros del proyecto HQC-128.}}{24}{figure.caption.471}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Árbol de ficheros del proyecto MCEliece348864.}}{29}{figure.caption.621}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Árbol de ficheros del proyecto Sphincs.}}{32}{figure.caption.701}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama del dispositivo ESP-Prog~\blx@tocontentsinit {0}\cite {esp-prog-pinout}.}}{11}{figure.caption.79}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Árbol de ficheros del proyecto Dilithium.}}{12}{figure.caption.81}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Árbol de ficheros del proyecto Kyber.}}{18}{figure.caption.301}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Árbol de ficheros del proyecto HQC-128.}}{24}{figure.caption.473}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Árbol de ficheros del proyecto MCEliece348864.}}{29}{figure.caption.623}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Árbol de ficheros del proyecto Sphincs.}}{32}{figure.caption.703}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tiempo de ejecución medio para el algoritmo Dilithium.}}{39}{figure.caption.859}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Tiempo de ejecución medio para el algoritmo Kyber.}}{40}{figure.caption.860}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Tiempo de ejecución medio para el algoritmo HQC.}}{40}{figure.caption.862}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagrama de Gantt}}{44}{figure.caption.845}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagrama de Gantt}}{46}{figure.caption.877}%
