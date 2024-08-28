@@ -13,10 +13,11 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Árbol de ficheros del proyecto HQC-128.}}{24}{figure.caption.473}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Árbol de ficheros del proyecto MCEliece348864.}}{29}{figure.caption.623}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Árbol de ficheros del proyecto Sphincs.}}{32}{figure.caption.703}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Errores de manejo de memoria \textit {stack} al ejecutar McEliece348864.}}{37}{figure.caption.840}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Tiempo de ejecución medio para el algoritmo Dilithium.}}{39}{figure.caption.859}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Tiempo de ejecución medio para el algoritmo Kyber.}}{40}{figure.caption.860}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Tiempo de ejecución medio para el algoritmo HQC.}}{40}{figure.caption.862}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tiempo de ejecución medio para el algoritmo Dilithium.}}{41}{figure.caption.879}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Tiempo de ejecución medio para el algoritmo Kyber.}}{42}{figure.caption.880}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Tiempo de ejecución medio para el algoritmo HQC.}}{42}{figure.caption.882}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagrama de Gantt}}{46}{figure.caption.877}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagrama de Gantt}}{49}{figure.caption.896}%

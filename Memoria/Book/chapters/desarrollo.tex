@@ -1514,13 +1514,30 @@ Finalmente, se ha llevado a cabo la ejecución del fichero de comprobación y se
 %TODO: captura comprobación
 
 
+
 \section{STM32}\label{sec:stm32}
 
+El último dispositivo a utilizar se trata del dispositivo STM32, específicamente de la plataforma Nucleo-L4R5ZI.
+
+Para poder programar esta plataforma, se disponen de dos posibilidades principales: Keil $\mu$Vision5~\cite{keil} y STM32Cube~\cite{stm32cube}.
+STM32Cube se trata de una herramienta oficial desarrollada por el grupo ST.
+Esta herramienta incluye los módulos:
+
+\begin{itemize}
+    \item \textbf{STM32CubeMX}~\cite{stm32cubemx}: Es un módulo gráfico utilizado para cualquier dispositivo STM32 el cual genera el código de inicialización en lenguaje C.
+    \item \textbf{STM32CubeIDE}~\cite{stm32cubeide}: Este \ac{IDE} se basa en soluciones como Eclipse y aporta un compilador y depurador.
+    \item \textbf{STM32CubeMonitor}~\cite{stm32cubemonitor}: Este módulo provee la posibilidad de comprobar datos de la aplicación en tiempo real.
+    \item \textbf{STM32CubeProgrammer}~\cite{stm32cubeprogrammer}: Este módulo proporciona una manera de leer y escribir en la memoria del dispositivo en tiempo real.
+\end{itemize}
+
+Como inconveniente, esta herramienta requiere un tiempo excesivo para su dominio ya que entraña gran complejidad.
+Por el contrario, Keil $\mu$Vision5 supone una menor dificultad por lo que será la herramienta utilizada.
 
 
 \subsection{Keil uVision5}\label{subsec:keil}
 
-%//TODO: falta explicación de la herramienta
+Este \textit{software} hace uso de librerías, módulos y ficheros de configuración específicos de los dispositivos utilizados.
+Para ello, se debe seleccionar el dispositivo utilizado en el menú ofrecido por la herramienta.
 
 Para poder cargar \textit{software} en el dispositivo, es necesario llevar a cabo la especificación del rango de memoria disponible para la carga del programa.
 Esto se realiza mediante la ventana a \texttt{Cortex-M Target Driver Setup}, a la cual se puede acceder desde la configuración del proyecto y, dentro de ella, el apartado ``Settings'' dentro de la ventana ``Utilities''.
@@ -1535,12 +1552,10 @@ Dicho código fuente se obtiene del repositorio perteneciente al proyecto PQClea
 
 Una vez se disponga del código, este se incluye en el projecto de ejemplo que se menciona en la Subsección~\ref{subsubsec:stm32-random}.
 
-Por último, se debe llevar a cabo la modificación del archivo 
-
 
 \subsubsection{Generación de números aleatorios}\label{subsubsec:stm32-random}
 
-Para la generación de números aleatorios, se ha utilizado el ejemplo propuesto en el repositorio STM32CubeL4~\cite{stm32cube}.
+Para la generación de números aleatorios, se ha utilizado el ejemplo propuesto en el repositorio STM32CubeL4~\cite{stm32cubeL4}.
 Este ejemplo se encuentra en la ruta \texttt{STM32CubeL4/Projects/NUCLEO-L4R5ZI/Examples/RNG/RNG\_MultiRNG}.
 En este ejemplo, se utiliza la función \texttt{HAL\_RNG\_GenerateRandomNumber}, la cual obtiene números aleatorios de 32 bits.
 Por ello, se ha diseñado la función \texttt{randombytes\_stm32\_randombytes} para su uso en el algoritmo.
@@ -1557,6 +1572,71 @@ int randombytes_stm32_randombytes(unsigned char *x, unsigned long long xlen){
     return 0;
 }
 \end{lstlisting}
+
+\subsubsection{Archivo \texttt{startup\_stm32l4r5xx.s}}\label{subsubsec:mceliece-startup}
+
+A continuación, se debe llevar a cabo la modificación del archivo \texttt{startup\_stm32l4r5xx.s}.
+En este archivo se indica el puntero a la pila y el manejador de la interrupción de reinicio entre otras opciones al iniciar el dispositivo.
+Además, se indica le tamaño de la memoria \textit{stack}, que inicialmente es 0x400.
+Este valor provoca que la ejecución del programa arroje un error a la hora de llamar a la función \texttt{pk\_gen} en el archivo \texttt{pk\_gen.c}.
+Los errores arrojados se muestran en la Figura~\ref{fig:mceliece-error}.
+Ambos errores se refieren a un uso erróneo de la memoria \textit{stack}.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/keil_error_5A000.png}
+        %\caption{Tiempos de convergencia en nRF52840 DK sin utilizar \textit{logs}.}
+        %\label{subfig:nrf_sin_log}
+    \end{subfigure}
+    \hspace{1.5cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/keil_error_5B500.png}
+        %\caption{Tiempos de convergencia en nRF52840 DK utilizando \textit{logs}.}
+        %\label{subfig:nrf_con_log}
+    \end{subfigure}
+       \caption{Errores de manejo de memoria \textit{stack} al ejecutar McEliece348864.}
+       \label{fig:mceliece-error}
+\end{figure}
+
+Dicho error se debe a que las variables utilizadas en dicha función no caben en la memoria \textit{stack}.
+Las definiciones de las variables más grandes se muestran en el Código~\ref{lst:mceliece-pk-gen}.
+
+\begin{lstlisting}[label={lst:mceliece-pk-gen},style=Cnice,firstnumber=1,caption={Variables en la función \texttt{pk\_gen}.}]
+#define GFBITS 12
+#define SYS_N 3488
+#define SYS_T 64
+#define PK_NROWS (SYS_T*GFBITS)
+
+typedef uint16_t gf;
+
+...
+
+uint64_t buf[ 1 << GFBITS ];
+
+unsigned char mat[ PK_NROWS ][ SYS_N / 8 ];
+
+gf g[ SYS_T + 1 ]; // Goppa polynomial
+gf L[ SYS_N ]; // support
+gf inv[ SYS_N ];
+\end{lstlisting}
+
+La variable \texttt{buf} utiliza 32.768 bytes (0x800), lo cual ya es superior al tamaño de la memoria \textit{stack} asignada inicialmente.
+La variable \texttt{mat} hace uso de 334.848 bytes (0x5\_1C00).
+La variable \texttt{g} emplea 130 bytes (0x82) mientras que las variables \texttt{L} y \texttt{inv} requieren 6.976 bytes (0x1B40) cada una.
+En total, el tamaño requerido de memoria \textit{stack} en esta función es de 381.650 bytes (0x5D2D2).
+Por ello, se debe asignar un tamaño mínimo a la memoria \textit{stack} suficiente para llevar a cabo la ejecución del \textit{software} pero no tanta como para que no sea posible almacenar el código ejecutable, lo cual sucede al asignar 0x6\_0000 bytes a la memoria \textit{stack}.
+La cantidad de memoria utilizada finalmente ha sido 0x5D800.
+
+
+\subsubsection{Función de cifrado y descifrado}\label{subsubsec:mceliece-dec-enc}
+
+Como se ha indicado en la Subsección~\ref{subsubsec:mceliece-startup}, para la ejecución de la función \texttt{pk\_gen} se ha de aumentar el tamaño de la memoria \textit{stack} casi hasta el máximo posible.
+Esto cubre únicamente la generación de claves del algoritmo.
+Al incluir las funciones de cifrado y descifrado se obtiene el mismo error que se recibía inicialmente para la función de generación de claves.
+Esto hace que no sea viable la ejecución de la función de cifrado y descifrado del algoritmo ya que no son manejables debido al tamaño disponible de memoria.
 
 
 \subsection{PQM4}\label{subsec:pqm4}

@@ -2424,11 +2424,17 @@
     <bcf:citekey order="56" intorder="1">get-rand-32</bcf:citekey>
     <bcf:citekey order="57" intorder="1">pqclean-github</bcf:citekey>
     <bcf:citekey order="58" intorder="1">sphincs-github</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">pqclean-github</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">keil</bcf:citekey>
     <bcf:citekey order="60" intorder="1">stm32cube</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">ina219</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">esp_timer_get_time</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">get_absolute_time</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">stm32cubemx</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">stm32cubeide</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">stm32cubemonitor</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">stm32cubeprogrammer</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">pqclean-github</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">stm32cubeL4</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">ina219</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">esp_timer_get_time</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">get_absolute_time</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

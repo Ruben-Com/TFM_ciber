@@ -27,5 +27,6 @@
 \contentsline {lstlisting}{\numberline {3.27}{\ignorespaces Archivo \texttt {Sphincs/src/randombytes.c}.}}{33}{lstlisting.749}%
 \contentsline {lstlisting}{\numberline {3.28}{\ignorespaces Archivo \texttt {Sphincs/main.c}.}}{34}{lstlisting.764}%
 \contentsline {lstlisting}{\numberline {3.29}{\ignorespaces Función de generación de números aleatorios para McEliece348864.}}{36}{lstlisting.829}%
-\contentsline {lstlisting}{\numberline {4.1}{\ignorespaces Medición temporal en el dispositivo ESP32.}}{38}{lstlisting.846}%
-\contentsline {lstlisting}{\numberline {4.2}{\ignorespaces Medición temporal en el dispositivo RP2040.}}{38}{lstlisting.852}%
+\contentsline {lstlisting}{\numberline {3.30}{\ignorespaces Variables en la función \texttt {pk\_gen}.}}{36}{lstlisting.841}%
+\contentsline {lstlisting}{\numberline {4.1}{\ignorespaces Medición temporal en el dispositivo ESP32.}}{40}{lstlisting.866}%
+\contentsline {lstlisting}{\numberline {4.2}{\ignorespaces Medición temporal en el dispositivo RP2040.}}{40}{lstlisting.872}%

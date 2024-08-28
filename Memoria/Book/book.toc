@@ -4,11 +4,11 @@
 \contentsline {chapter}{Resumen}{v}{chapter*.2}%
 \contentsline {chapter}{Abstract}{vii}{chapter*.3}%
 \contentsline {chapter}{\'{I}ndice general}{ix}{section*.4}%
-\contentsline {chapter}{\'{I}ndice de figuras}{xi}{section*.5}%
-\contentsline {chapter}{Índice de tablas}{xiii}{section*.6}%
-\contentsline {chapter}{Índice de código fuente}{xv}{chapter*.7}%
-\contentsline {chapter}{Índice de algoritmos}{xvii}{chapter*.8}%
-\contentsline {chapter}{Lista de acrónimos}{xix}{chapter*.10}%
+\contentsline {chapter}{\'{I}ndice de figuras}{xiii}{section*.5}%
+\contentsline {chapter}{Índice de tablas}{xv}{section*.6}%
+\contentsline {chapter}{Índice de código fuente}{xvii}{chapter*.7}%
+\contentsline {chapter}{Índice de algoritmos}{xix}{chapter*.8}%
+\contentsline {chapter}{Lista de acrónimos}{xxi}{chapter*.10}%
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.11}%
 \contentsline {section}{\numberline {1.1}Motivación}{1}{section.12}%
 \contentsline {section}{\numberline {1.2}Objetivos del proyecto}{1}{section.13}%
@@ -67,26 +67,28 @@
 \contentsline {subsubsection}{\numberline {3.3.4.4}Comprobación del algoritmo}{35}{subsubsection.824}%
 \contentsline {section}{\numberline {3.4}STM32}{35}{section.825}%
 \contentsline {subsection}{\numberline {3.4.1}Keil uVision5}{35}{subsection.826}%
-\contentsline {subsection}{\numberline {3.4.2}McEliece348864}{35}{subsection.827}%
-\contentsline {subsubsection}{\numberline {3.4.2.1}Generación de números aleatorios}{35}{subsubsection.828}%
-\contentsline {subsection}{\numberline {3.4.3}PQM4}{36}{subsection.839}%
-\contentsline {chapter}{\numberline {4}Evaluación y resultados}{37}{chapter.840}%
-\contentsline {section}{\numberline {4.1}Pruebas unitarias de comprobación}{37}{section.841}%
-\contentsline {section}{\numberline {4.2}Medidas de ejecución}{37}{section.842}%
-\contentsline {subsection}{\numberline {4.2.1}Consumo energético}{37}{subsection.843}%
-\contentsline {subsection}{\numberline {4.2.2}Tiempo de ejecución}{37}{subsection.844}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Temporización en dispositivo ESP32}{37}{subsubsection.845}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Temporización en dispositivo RP2040}{38}{subsubsection.851}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}Temporización en dispositivo STM32}{38}{subsubsection.857}%
-\contentsline {subsection}{\numberline {4.2.3}Pruebas en dispositivo ESP32}{38}{subsection.858}%
-\contentsline {subsection}{\numberline {4.2.4}Pruebas en dispositivo RP2040}{39}{subsection.861}%
-\contentsline {subsection}{\numberline {4.2.5}Pruebas en dispositivo STM32}{39}{subsection.863}%
-\contentsline {chapter}{\numberline {5}Conclusiones y líneas futuras}{41}{chapter.864}%
-\contentsline {section}{\numberline {5.1}Conclusiones}{41}{section.865}%
-\contentsline {section}{\numberline {5.2}Líneas futuras}{41}{section.866}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{43}{chapter*.867}%
-\contentsline {chapter}{Ap\'{e}ndice \numberline {A}Temporización y presupuesto}{45}{Appendix.868}%
-\contentsline {section}{\numberline {A.1}PLanificación temporal}{45}{section.869}%
-\contentsline {section}{\numberline {A.2}Recursos Hardware}{45}{section.878}%
-\contentsline {section}{\numberline {A.3}Recursos Humanos}{46}{section.880}%
-\contentsline {section}{\numberline {A.4}Presupuesto de ejecución material}{46}{section.882}%
+\contentsline {subsection}{\numberline {3.4.2}McEliece348864}{36}{subsection.827}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}Generación de números aleatorios}{36}{subsubsection.828}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}Archivo \texttt {startup\_stm32l4r5xx.s}}{36}{subsubsection.839}%
+\contentsline {subsubsection}{\numberline {3.4.2.3}Función de cifrado y descifrado}{37}{subsubsection.858}%
+\contentsline {subsection}{\numberline {3.4.3}PQM4}{38}{subsection.859}%
+\contentsline {chapter}{\numberline {4}Evaluación y resultados}{39}{chapter.860}%
+\contentsline {section}{\numberline {4.1}Pruebas unitarias de comprobación}{39}{section.861}%
+\contentsline {section}{\numberline {4.2}Medidas de ejecución}{39}{section.862}%
+\contentsline {subsection}{\numberline {4.2.1}Consumo energético}{39}{subsection.863}%
+\contentsline {subsection}{\numberline {4.2.2}Tiempo de ejecución}{39}{subsection.864}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Temporización en dispositivo ESP32}{39}{subsubsection.865}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Temporización en dispositivo RP2040}{40}{subsubsection.871}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Temporización en dispositivo STM32}{40}{subsubsection.877}%
+\contentsline {subsection}{\numberline {4.2.3}Pruebas en dispositivo ESP32}{40}{subsection.878}%
+\contentsline {subsection}{\numberline {4.2.4}Pruebas en dispositivo RP2040}{41}{subsection.881}%
+\contentsline {subsection}{\numberline {4.2.5}Pruebas en dispositivo STM32}{41}{subsection.883}%
+\contentsline {chapter}{\numberline {5}Conclusiones y líneas futuras}{43}{chapter.884}%
+\contentsline {section}{\numberline {5.1}Conclusiones}{43}{section.885}%
+\contentsline {section}{\numberline {5.2}Líneas futuras}{43}{section.886}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{45}{chapter*.887}%
+\contentsline {chapter}{Ap\'{e}ndice \numberline {A}Temporización y presupuesto}{49}{Appendix.888}%
+\contentsline {section}{\numberline {A.1}PLanificación temporal}{49}{section.889}%
+\contentsline {section}{\numberline {A.2}Recursos Hardware}{50}{section.897}%
+\contentsline {section}{\numberline {A.3}Recursos Humanos}{50}{section.899}%
+\contentsline {section}{\numberline {A.4}Presupuesto de ejecución material}{50}{section.901}%

@@ -711,7 +711,109 @@
       \verb https://github.com/sphincs/sphincsplus
       \endverb
     \endentry
+    \entry{keil}{misc}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{title}{µVision GUI}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.arm.com/documentation/101407/0540/User-Interface/uVision-GUI
+      \endverb
+      \verb{url}
+      \verb https://developer.arm.com/documentation/101407/0540/User-Interface/uVision-GUI
+      \endverb
+    \endentry
     \entry{stm32cube}{misc}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{STM32Cube}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.st.com/en/ecosystems/stm32cube.html
+      \endverb
+      \verb{url}
+      \verb https://www.st.com/en/ecosystems/stm32cube.html
+      \endverb
+    \endentry
+    \entry{stm32cubemx}{misc}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{STM32CubeMX}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.st.com/en/development-tools/stm32cubemx.html
+      \endverb
+      \verb{url}
+      \verb https://www.st.com/en/development-tools/stm32cubemx.html
+      \endverb
+    \endentry
+    \entry{stm32cubeide}{misc}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{STM32CubeIDE}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.st.com/en/development-tools/stm32cubeide.html
+      \endverb
+      \verb{url}
+      \verb https://www.st.com/en/development-tools/stm32cubeide.html
+      \endverb
+    \endentry
+    \entry{stm32cubemonitor}{misc}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{STM32CubeMonitor}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.st.com/en/development-tools/stm32cubemonitor.html
+      \endverb
+      \verb{url}
+      \verb https://www.st.com/en/development-tools/stm32cubemonitor.html
+      \endverb
+    \endentry
+    \entry{stm32cubeprogrammer}{misc}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{STM32CubeProg}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.st.com/en/development-tools/stm32cubeprog.html
+      \endverb
+      \verb{url}
+      \verb https://www.st.com/en/development-tools/stm32cubeprog.html
+      \endverb
+    \endentry
+    \entry{stm32cubeL4}{misc}{}{}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}

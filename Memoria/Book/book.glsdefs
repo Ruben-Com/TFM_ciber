@@ -2518,6 +2518,34 @@ parent={},%
 %
 }%
 
+\glsdefs@newdocentry{IDE}%
+{%
+name={\acronymfont {\glsentryshort {IDE}}},%
+sort={IDE},%
+type={acronym},%
+first={IDE},%
+firstplural={IDEs},%
+text={IDE},%
+plural={IDEs},%
+description={Integrated Development Environment},%
+descriptionplural={Integrated Development Environment},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Integrated Development Environment},%
+longplural={Integrated Development Environments},%
+short={IDE},%
+shortplural={IDEs},%
+counter={page},%
+parent={},%
+%
+}%
+
 \glsdefs@newdocentry{ACCCHARS}%
 {%
 name={\acronymfont {\glsentryshort {ACCCHARS}}},%
