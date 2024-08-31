@@ -1,20 +1,21 @@
-[0] Config.pm:308> INFO - This is Biber 2.20
-[1] Config.pm:311> INFO - Logfile is 'book.blg'
-[324] biber-MSWIN64:340> INFO - === 
-[420] Biber.pm:420> INFO - Reading 'book.bcf'
-[739] Biber.pm:994> INFO - Found 43 citekeys in bib section 0
-[769] Biber.pm:4463> INFO - Processing section 0
-[802] Biber.pm:4654> INFO - Looking for bibtex file 'biblio/biblio.bib' for section 0
-[956] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1298] bibtex.pm:1519> INFO - Found BibTeX data source 'biblio/biblio.bib'
-[1585] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1585] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1585] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1585] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[1671] bbl.pm:676> INFO - Writing 'book.bbl' with encoding 'UTF-8'
-[1714] bbl.pm:779> INFO - Output to book.bbl
-[1714] Biber.pm:131> WARN - Possible typo (case mismatch) between datasource keys: 'AMI' and 'ami' in file 'biblio/biblio.bib'
-[1715] Biber.pm:131> WARN - Duplicate entry key: '7366295' in file 'biblio/biblio.bib', skipping ...
-[1715] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'Rietsche2022' is not an integer - this will probably not sort properly.
-[1715] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Ruben\AppData\Local\Temp\biber_tmp_pxah\a9e03cb3043b9e2c02591da84105bb68_5840.utf8, line 468, warning: 95 characters of junk seen at toplevel
-[1716] Biber.pm:133> INFO - WARNINGS: 4
+[2] Config.pm:308> INFO - This is Biber 2.20
+[2] Config.pm:311> INFO - Logfile is 'book.blg'
+[304] biber-MSWIN64:340> INFO - === 
+[418] Biber.pm:420> INFO - Reading 'book.bcf'
+[1197] Biber.pm:994> INFO - Found 50 citekeys in bib section 0
+[1247] Biber.pm:4463> INFO - Processing section 0
+[1276] Biber.pm:4654> INFO - Looking for bibtex file 'biblio/biblio.bib' for section 0
+[1427] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1925] bibtex.pm:1519> INFO - Found BibTeX data source 'biblio/biblio.bib'
+[2378] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2378] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2378] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[2378] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[2470] bbl.pm:676> INFO - Writing 'book.bbl' with encoding 'UTF-8'
+[2504] bbl.pm:779> INFO - Output to book.bbl
+[2505] Biber.pm:131> WARN - Possible typo (case mismatch) between datasource keys: 'AMI' and 'ami' in file 'biblio/biblio.bib'
+[2505] Biber.pm:131> WARN - Duplicate entry key: '7366295' in file 'biblio/biblio.bib', skipping ...
+[2506] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'Rietsche2022' is not an integer - this will probably not sort properly.
+[2506] Biber.pm:131> WARN - legacy month field 'October' in entry 'lamport1979constructing' is not an integer - this will probably not sort properly.
+[2506] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\Ruben\AppData\Local\Temp\biber_tmp_GqGH\a9e03cb3043b9e2c02591da84105bb68_20248.utf8, line 468, warning: 95 characters of junk seen at toplevel
+[2507] Biber.pm:133> INFO - WARNINGS: 5

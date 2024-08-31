@@ -1,94 +1,96 @@
 \babel@toc {english}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Agradecimientos}{iii}{chapter*.1}%
-\contentsline {chapter}{Resumen}{v}{chapter*.2}%
-\contentsline {chapter}{Abstract}{vii}{chapter*.3}%
-\contentsline {chapter}{\'{I}ndice general}{ix}{section*.4}%
-\contentsline {chapter}{\'{I}ndice de figuras}{xiii}{section*.5}%
-\contentsline {chapter}{Índice de tablas}{xv}{section*.6}%
-\contentsline {chapter}{Índice de código fuente}{xvii}{chapter*.7}%
-\contentsline {chapter}{Índice de algoritmos}{xix}{chapter*.8}%
-\contentsline {chapter}{Lista de acrónimos}{xxi}{chapter*.10}%
-\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.11}%
-\contentsline {section}{\numberline {1.1}Motivación}{1}{section.12}%
-\contentsline {section}{\numberline {1.2}Objetivos del proyecto}{1}{section.13}%
-\contentsline {section}{\numberline {1.3}Estructura de la memoria}{1}{section.14}%
-\contentsline {chapter}{\numberline {2}Estado del arte}{3}{chapter.22}%
-\contentsline {section}{\numberline {2.1}Criptografía}{3}{section.23}%
-\contentsline {subsection}{\numberline {2.1.1}Características}{3}{subsection.24}%
-\contentsline {subsection}{\numberline {2.1.2}Modelos actuales}{3}{subsection.25}%
-\contentsline {subsection}{\numberline {2.1.3}Computación cuántica}{3}{subsection.26}%
-\contentsline {subsection}{\numberline {2.1.4}Criptografía postcuántica}{4}{subsection.29}%
-\contentsline {subsubsection}{\numberline {2.1.4.1}Dilithium}{4}{subsubsection.30}%
-\contentsline {subsubsection}{\numberline {2.1.4.2}Kyber}{5}{subsubsection.41}%
-\contentsline {subsubsection}{\numberline {2.1.4.3}Sphincs}{5}{subsubsection.45}%
-\contentsline {subsubsection}{\numberline {2.1.4.4}McEliece}{5}{subsubsection.46}%
-\contentsline {subsubsection}{\numberline {2.1.4.5}HQC}{5}{subsubsection.47}%
-\contentsline {subsubsection}{\numberline {2.1.4.6}Falcon}{5}{subsubsection.48}%
-\contentsline {section}{\numberline {2.2}IoT}{5}{section.49}%
-\contentsline {subsection}{\numberline {2.2.1}ESP32}{5}{subsection.50}%
-\contentsline {subsection}{\numberline {2.2.2}RP2040}{6}{subsection.52}%
-\contentsline {subsection}{\numberline {2.2.3}STM32}{7}{subsection.54}%
-\contentsline {chapter}{\numberline {3}Desarrollo}{9}{chapter.56}%
-\contentsline {section}{\numberline {3.1}Selección de dispositivos}{9}{section.57}%
-\contentsline {section}{\numberline {3.2}ESP32}{9}{section.58}%
-\contentsline {subsection}{\numberline {3.2.1}ESP-IDF}{10}{subsection.59}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}IDF FreeRTOS}{10}{subsubsection.60}%
-\contentsline {subsubsection}{\numberline {3.2.1.2}Instalación}{10}{subsubsection.61}%
-\contentsline {subsection}{\numberline {3.2.2}ESP-Prog}{10}{subsection.78}%
-\contentsline {subsection}{\numberline {3.2.3}Dilithium}{11}{subsection.80}%
-\contentsline {subsubsection}{\numberline {3.2.3.1}Ficheros CMake}{12}{subsubsection.82}%
-\contentsline {subsubsection}{\numberline {3.2.3.2}Generación de números aleatorios}{13}{subsubsection.91}%
-\contentsline {subsubsection}{\numberline {3.2.3.3}Fichero de comprobación}{14}{subsubsection.136}%
-\contentsline {subsubsection}{\numberline {3.2.3.4}Uso de memoria dinámica}{15}{subsubsection.204}%
-\contentsline {subsubsection}{\numberline {3.2.3.5}Comprobación del algoritmo}{17}{subsubsection.299}%
-\contentsline {subsection}{\numberline {3.2.4}Kyber}{18}{subsection.300}%
-\contentsline {subsubsection}{\numberline {3.2.4.1}Ficheros CMake}{19}{subsubsection.302}%
-\contentsline {subsubsection}{\numberline {3.2.4.2}Generación de números aleatorios}{19}{subsubsection.311}%
-\contentsline {subsubsection}{\numberline {3.2.4.3}Fichero de comprobación}{19}{subsubsection.312}%
-\contentsline {subsubsection}{\numberline {3.2.4.4}Uso de memoria dinámica}{21}{subsubsection.388}%
-\contentsline {subsubsection}{\numberline {3.2.4.5}Comprobación del algoritmo}{22}{subsubsection.456}%
-\contentsline {section}{\numberline {3.3}RP2040}{22}{section.457}%
-\contentsline {subsection}{\numberline {3.3.1}Pico SDK}{23}{subsection.458}%
-\contentsline {subsection}{\numberline {3.3.2}HQC-128}{23}{subsection.472}%
-\contentsline {subsubsection}{\numberline {3.3.2.1}Fichero CMake}{24}{subsubsection.474}%
-\contentsline {subsubsection}{\numberline {3.3.2.2}Generación de números aleatorios}{26}{subsubsection.519}%
-\contentsline {subsubsection}{\numberline {3.3.2.3}Fichero de comprobación}{26}{subsubsection.536}%
-\contentsline {subsubsection}{\numberline {3.3.2.4}Comprobación del algoritmo}{28}{subsubsection.621}%
-\contentsline {subsection}{\numberline {3.3.3}McEliece348864}{28}{subsection.622}%
-\contentsline {subsubsection}{\numberline {3.3.3.1}Generación de números aleatorios}{30}{subsubsection.624}%
-\contentsline {subsubsection}{\numberline {3.3.3.2}Fichero CMake}{30}{subsubsection.648}%
-\contentsline {subsubsection}{\numberline {3.3.3.3}Fichero de comprobación}{31}{subsubsection.700}%
-\contentsline {subsubsection}{\numberline {3.3.3.4}Comprobación del algoritmo}{31}{subsubsection.701}%
-\contentsline {subsection}{\numberline {3.3.4}Sphincs}{31}{subsection.702}%
-\contentsline {subsubsection}{\numberline {3.3.4.1}Fichero CMake}{32}{subsubsection.704}%
-\contentsline {subsubsection}{\numberline {3.3.4.2}Generación de números aleatorios}{33}{subsubsection.748}%
-\contentsline {subsubsection}{\numberline {3.3.4.3}Fichero de comprobación}{34}{subsubsection.763}%
-\contentsline {subsubsection}{\numberline {3.3.4.4}Comprobación del algoritmo}{35}{subsubsection.824}%
-\contentsline {section}{\numberline {3.4}STM32}{35}{section.825}%
-\contentsline {subsection}{\numberline {3.4.1}Keil uVision5}{35}{subsection.826}%
-\contentsline {subsection}{\numberline {3.4.2}McEliece348864}{36}{subsection.827}%
-\contentsline {subsubsection}{\numberline {3.4.2.1}Generación de números aleatorios}{36}{subsubsection.828}%
-\contentsline {subsubsection}{\numberline {3.4.2.2}Archivo \texttt {startup\_stm32l4r5xx.s}}{36}{subsubsection.839}%
-\contentsline {subsubsection}{\numberline {3.4.2.3}Función de cifrado y descifrado}{37}{subsubsection.858}%
-\contentsline {subsection}{\numberline {3.4.3}PQM4}{38}{subsection.859}%
-\contentsline {chapter}{\numberline {4}Evaluación y resultados}{39}{chapter.860}%
-\contentsline {section}{\numberline {4.1}Pruebas unitarias de comprobación}{39}{section.861}%
-\contentsline {section}{\numberline {4.2}Medidas de ejecución}{39}{section.862}%
-\contentsline {subsection}{\numberline {4.2.1}Consumo energético}{39}{subsection.863}%
-\contentsline {subsection}{\numberline {4.2.2}Tiempo de ejecución}{39}{subsection.864}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Temporización en dispositivo ESP32}{39}{subsubsection.865}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Temporización en dispositivo RP2040}{40}{subsubsection.871}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}Temporización en dispositivo STM32}{40}{subsubsection.877}%
-\contentsline {subsection}{\numberline {4.2.3}Pruebas en dispositivo ESP32}{40}{subsection.878}%
-\contentsline {subsection}{\numberline {4.2.4}Pruebas en dispositivo RP2040}{41}{subsection.881}%
-\contentsline {subsection}{\numberline {4.2.5}Pruebas en dispositivo STM32}{41}{subsection.883}%
-\contentsline {chapter}{\numberline {5}Conclusiones y líneas futuras}{43}{chapter.884}%
-\contentsline {section}{\numberline {5.1}Conclusiones}{43}{section.885}%
-\contentsline {section}{\numberline {5.2}Líneas futuras}{43}{section.886}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{45}{chapter*.887}%
-\contentsline {chapter}{Ap\'{e}ndice \numberline {A}Temporización y presupuesto}{49}{Appendix.888}%
-\contentsline {section}{\numberline {A.1}PLanificación temporal}{49}{section.889}%
-\contentsline {section}{\numberline {A.2}Recursos Hardware}{50}{section.897}%
-\contentsline {section}{\numberline {A.3}Recursos Humanos}{50}{section.899}%
-\contentsline {section}{\numberline {A.4}Presupuesto de ejecución material}{50}{section.901}%
+\contentsline {chapter}{Resumen}{iii}{chapter*.1}%
+\contentsline {chapter}{Abstract}{v}{chapter*.2}%
+\contentsline {chapter}{\'{I}ndice general}{vii}{section*.3}%
+\contentsline {chapter}{\'{I}ndice de figuras}{xi}{section*.4}%
+\contentsline {chapter}{Índice de tablas}{xiii}{section*.5}%
+\contentsline {chapter}{Índice de código fuente}{xv}{chapter*.6}%
+\contentsline {chapter}{Índice de algoritmos}{xvii}{chapter*.7}%
+\contentsline {chapter}{Lista de acrónimos}{xix}{chapter*.9}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.10}%
+\contentsline {section}{\numberline {1.1}Motivación}{1}{section.11}%
+\contentsline {section}{\numberline {1.2}Objetivos del proyecto}{1}{section.12}%
+\contentsline {section}{\numberline {1.3}Estructura de la memoria}{1}{section.13}%
+\contentsline {chapter}{\numberline {2}Estado del arte}{3}{chapter.21}%
+\contentsline {section}{\numberline {2.1}Criptografía}{3}{section.22}%
+\contentsline {subsection}{\numberline {2.1.1}Características}{3}{subsection.23}%
+\contentsline {subsection}{\numberline {2.1.2}Modelos actuales}{4}{subsection.24}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}RSA}{4}{subsubsection.25}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}DSA}{4}{subsubsection.26}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}Curva elíptica}{4}{subsubsection.27}%
+\contentsline {subsection}{\numberline {2.1.3}Computación cuántica}{5}{subsection.28}%
+\contentsline {subsection}{\numberline {2.1.4}Criptografía postcuántica}{5}{subsection.32}%
+\contentsline {subsubsection}{\numberline {2.1.4.1}Dilithium}{7}{subsubsection.33}%
+\contentsline {subsubsection}{\numberline {2.1.4.2}Kyber}{8}{subsubsection.44}%
+\contentsline {subsubsection}{\numberline {2.1.4.3}Sphincs+}{8}{subsubsection.49}%
+\contentsline {subsubsection}{\numberline {2.1.4.4}McEliece}{9}{subsubsection.51}%
+\contentsline {subsubsection}{\numberline {2.1.4.5}HQC}{10}{subsubsection.73}%
+\contentsline {subsubsection}{\numberline {2.1.4.6}Falcon}{10}{subsubsection.75}%
+\contentsline {section}{\numberline {2.2}IoT}{10}{section.77}%
+\contentsline {subsection}{\numberline {2.2.1}ESP32}{11}{subsection.78}%
+\contentsline {subsection}{\numberline {2.2.2}RP2040}{11}{subsection.80}%
+\contentsline {subsection}{\numberline {2.2.3}STM32}{12}{subsection.82}%
+\contentsline {chapter}{\numberline {3}Desarrollo}{15}{chapter.84}%
+\contentsline {section}{\numberline {3.1}Selección de dispositivos}{15}{section.85}%
+\contentsline {section}{\numberline {3.2}ESP32}{15}{section.86}%
+\contentsline {subsection}{\numberline {3.2.1}ESP-IDF}{16}{subsection.87}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}IDF FreeRTOS}{16}{subsubsection.88}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}Instalación}{16}{subsubsection.89}%
+\contentsline {subsection}{\numberline {3.2.2}ESP-Prog}{16}{subsection.106}%
+\contentsline {subsection}{\numberline {3.2.3}Dilithium}{17}{subsection.108}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Ficheros CMake}{18}{subsubsection.110}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}Generación de números aleatorios}{19}{subsubsection.119}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}Fichero de comprobación}{20}{subsubsection.164}%
+\contentsline {subsubsection}{\numberline {3.2.3.4}Uso de memoria dinámica}{21}{subsubsection.232}%
+\contentsline {subsubsection}{\numberline {3.2.3.5}Comprobación del algoritmo}{23}{subsubsection.327}%
+\contentsline {subsection}{\numberline {3.2.4}Kyber}{25}{subsection.329}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}Ficheros CMake}{26}{subsubsection.331}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}Generación de números aleatorios}{26}{subsubsection.340}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}Fichero de comprobación}{26}{subsubsection.341}%
+\contentsline {subsubsection}{\numberline {3.2.4.4}Uso de memoria dinámica}{28}{subsubsection.417}%
+\contentsline {subsubsection}{\numberline {3.2.4.5}Comprobación del algoritmo}{29}{subsubsection.485}%
+\contentsline {section}{\numberline {3.3}RP2040}{30}{section.487}%
+\contentsline {subsection}{\numberline {3.3.1}Pico SDK}{30}{subsection.488}%
+\contentsline {subsection}{\numberline {3.3.2}HQC-128}{30}{subsection.502}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Fichero CMake}{31}{subsubsection.504}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}Generación de números aleatorios}{33}{subsubsection.549}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}Fichero de comprobación}{33}{subsubsection.566}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}Comprobación del algoritmo}{35}{subsubsection.651}%
+\contentsline {subsection}{\numberline {3.3.3}McEliece348864}{35}{subsection.653}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}Generación de números aleatorios}{37}{subsubsection.655}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}Fichero CMake}{37}{subsubsection.679}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}Fichero de comprobación}{38}{subsubsection.731}%
+\contentsline {subsubsection}{\numberline {3.3.3.4}Comprobación del algoritmo}{38}{subsubsection.732}%
+\contentsline {subsection}{\numberline {3.3.4}Sphincs}{38}{subsection.734}%
+\contentsline {subsubsection}{\numberline {3.3.4.1}Fichero CMake}{40}{subsubsection.736}%
+\contentsline {subsubsection}{\numberline {3.3.4.2}Generación de números aleatorios}{41}{subsubsection.780}%
+\contentsline {subsubsection}{\numberline {3.3.4.3}Fichero de comprobación}{41}{subsubsection.795}%
+\contentsline {subsubsection}{\numberline {3.3.4.4}Comprobación del algoritmo}{42}{subsubsection.856}%
+\contentsline {section}{\numberline {3.4}STM32}{42}{section.858}%
+\contentsline {subsection}{\numberline {3.4.1}Keil uVision5}{43}{subsection.859}%
+\contentsline {subsection}{\numberline {3.4.2}McEliece348864}{43}{subsection.860}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}Generación de números aleatorios}{43}{subsubsection.861}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}Archivo \texttt {startup\_stm32l4r5xx.s}}{44}{subsubsection.872}%
+\contentsline {subsubsection}{\numberline {3.4.2.3}Función de encapsulado y desencapsulado}{45}{subsubsection.891}%
+\contentsline {subsection}{\numberline {3.4.3}PQM4}{45}{subsection.892}%
+\contentsline {chapter}{\numberline {4}Evaluación y resultados}{47}{chapter.895}%
+\contentsline {section}{\numberline {4.1}Pruebas unitarias de comprobación}{47}{section.896}%
+\contentsline {section}{\numberline {4.2}Medidas de ejecución}{47}{section.897}%
+\contentsline {subsection}{\numberline {4.2.1}Consumo energético}{47}{subsection.898}%
+\contentsline {subsection}{\numberline {4.2.2}Tiempo de ejecución}{47}{subsection.899}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Temporización en dispositivo ESP32}{47}{subsubsection.900}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Temporización en dispositivo RP2040}{48}{subsubsection.906}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Temporización en dispositivo STM32}{48}{subsubsection.912}%
+\contentsline {subsection}{\numberline {4.2.3}Pruebas en dispositivo ESP32}{48}{subsection.913}%
+\contentsline {subsection}{\numberline {4.2.4}Pruebas en dispositivo RP2040}{49}{subsection.916}%
+\contentsline {subsection}{\numberline {4.2.5}Pruebas en dispositivo STM32}{49}{subsection.918}%
+\contentsline {chapter}{\numberline {5}Conclusiones y líneas futuras}{51}{chapter.919}%
+\contentsline {section}{\numberline {5.1}Conclusiones}{51}{section.920}%
+\contentsline {section}{\numberline {5.2}Líneas futuras}{51}{section.921}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{53}{chapter*.922}%
+\contentsline {chapter}{Ap\'{e}ndice \numberline {A}Temporización y presupuesto}{57}{Appendix.923}%
+\contentsline {section}{\numberline {A.1}PLanificación temporal}{57}{section.924}%
+\contentsline {section}{\numberline {A.2}Recursos Hardware}{58}{section.932}%
+\contentsline {section}{\numberline {A.3}Recursos Humanos}{58}{section.934}%
+\contentsline {section}{\numberline {A.4}Presupuesto de ejecución material}{58}{section.936}%

@@ -2546,6 +2546,90 @@ parent={},%
 %
 }%
 
+\glsdefs@newdocentry{DSS}%
+{%
+name={\acronymfont {\glsentryshort {DSS}}},%
+sort={DSS},%
+type={acronym},%
+first={DSS},%
+firstplural={DSSs},%
+text={DSS},%
+plural={DSSs},%
+description={Digital Signature Standard},%
+descriptionplural={Digital Signature Standard},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Digital Signature Standard},%
+longplural={Digital Signature Standards},%
+short={DSS},%
+shortplural={DSSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OW-CPA}%
+{%
+name={\acronymfont {\glsentryshort {OW-CPA}}},%
+sort={OW-CPA},%
+type={acronym},%
+first={OW-CPA},%
+firstplural={OW-CPAs},%
+text={OW-CPA},%
+plural={OW-CPAs},%
+description={One Way Chosen Plaintext Attack},%
+descriptionplural={One Way Chosen Plaintext Attack},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={One Way Chosen Plaintext Attack},%
+longplural={One Way Chosen Plaintext Attacks},%
+short={OW-CPA},%
+shortplural={OW-CPAs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{KEM}%
+{%
+name={\acronymfont {\glsentryshort {KEM}}},%
+sort={KEM},%
+type={acronym},%
+first={KEM},%
+firstplural={KEMs},%
+text={KEM},%
+plural={KEMs},%
+description={Key-Encapsulation Mecanism},%
+descriptionplural={Key-Encapsulation Mecanism},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Key-Encapsulation Mecanism},%
+longplural={Key-Encapsulation Mecanisms},%
+short={KEM},%
+shortplural={KEMs},%
+counter={page},%
+parent={},%
+%
+}%
+
 \glsdefs@newdocentry{ACCCHARS}%
 {%
 name={\acronymfont {\glsentryshort {ACCCHARS}}},%

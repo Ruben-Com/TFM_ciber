@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.3)  28 AUG 2024 10:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.3)  1 SEP 2024 00:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1645,7 +1645,11 @@ LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
 (Font)              Font shape `T1/fve/m/sl' tried instead on input line 52.
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 52.
-) (acknowledgements/agradecimientos.tex [1
+) (acronyms/defacronymsgl.tex
+\@gls@deffile=\write9
+\openout9 = `book.glsdefs'.
+
+) (symbols/defsymbolsgl.tex) (abstract/resumen.tex [1
 
 \openout5 = `book.ist'.
 
@@ -1655,24 +1659,12 @@ LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 
 ]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 46.
+(Font)              scaled to size 22.39185pt on input line 31.
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 46.
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 52.
-LaTeX Font Info:    Font shape `T1/fve/m/it' in size <9> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 52.
-LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 52.
-) (acronyms/defacronymsgl.tex
-\@gls@deffile=\write9
-\openout9 = `book.glsdefs'.
+(Font)              scaled to size 22.39185pt on input line 31.
+) (abstract/abstract.tex [3] [4
 
-) (symbols/defsymbolsgl.tex) (abstract/resumen.tex [3] [4
-
-]) (abstract/abstract.tex [5] [6
-
-]) (cover/toc+lof+lot.tex [7] [8
+]) (cover/toc+lof+lot.tex [5] [6
 
 ] (book.toc
 LaTeX Info: Redefining \sptext on input line 2.
@@ -1707,24 +1699,24 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [9]
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 72.
+) [7]
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 74.
  (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/latex/bera\t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 72.
-LaTeX Info: Redefining \sptext on input line 94.
-LaTeX Info: Redefining \. on input line 94.
-LaTeX Info: Redefining \% on input line 94.
- [10])
+(Font)              scaled to size 8.99994pt on input line 74.
+LaTeX Info: Redefining \sptext on input line 95.
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
+ [8])
 \tf@toc=\write10
 \openout10 = `book.toc'.
 
 LaTeX Info: Redefining \sptext on input line 35.
 LaTeX Info: Redefining \. on input line 35.
 LaTeX Info: Redefining \% on input line 35.
- [11] [12
+ [9] [10
 
 ] (book.lof
 LaTeX Info: Redefining \sptext on input line 2.
@@ -1734,7 +1726,7 @@ LaTeX Info: Redefining \% on input line 2.
 \tf@lof=\write11
 \openout11 = `book.lof'.
 
- [13] [14
+ [11] [12
 
 ] (book.lot
 LaTeX Info: Redefining \sptext on input line 2.
@@ -1744,7 +1736,7 @@ LaTeX Info: Redefining \% on input line 2.
 \tf@lot=\write12
 \openout12 = `book.lot'.
 
-) (cover/extralistings.tex [15] [16
+) (cover/extralistings.tex [13] [14
 
 ] (book.lol
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
@@ -1765,18 +1757,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
 \tf@lol=\write13
 \openout13 = `book.lol'.
 
- [17] [18
+ [15] [16
 
 ] (book.loa)
 \tf@loa=\write14
 \openout14 = `book.loa'.
 
- [19] [20
+ [17] [18
 
-]) (acronyms/acronymsgl.tex (book.acr)) [21
+]) (acronyms/acronymsgl.tex (book.acr)) [19
 
 
-] [22
+] [20
 
 ] (chapters/introduccion.tex
 Cap\'{\i }tulo 1.
@@ -1803,73 +1795,104 @@ LaTeX Info: Redefining \% on input line 25.
  [2]
 Cap\'{\i }tulo 2.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 33.
+(Font)              scaled to size 10.79993pt on input line 36.
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 33.
-<figures/qubit.png, id=881, 502.12593pt x 283.81032pt>
-File: figures/qubit.png Graphic file (type png)
-<use figures/qubit.png>
-Package pdftex.def Info: figures/qubit.png  used on input line 47.
-(pdftex.def)             Requested size: 273.14923pt x 154.39423pt.
+(Font)              scaled to size 10.79993pt on input line 36.
 [3
 
-{C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./figures/qubit.png>]
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 76.
-LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 4.49997pt on input line 76.
-LaTeX Font Info:    Font shape `T1/fve/b/it' in size <10> not available
-(Font)              Font shape `T1/fve/b/sl' tried instead on input line 104.
-LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
-(Font)              scaled to size 8.99994pt on input line 104.
-LaTeX Font Info:    Font shape `T1/fve/m/it' in size <7> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 104.
-LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 104.
-LaTeX Font Info:    Font shape `T1/fve/m/it' in size <5> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 104.
-LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 4.49997pt on input line 104.
-LaTeX Info: Redefining \sptext on input line 128.
-LaTeX Info: Redefining \. on input line 128.
-LaTeX Info: Redefining \% on input line 128.
- [4]
-<figures/esp32-pinout.jpg, id=932, 1271.75125pt x 672.5125pt>
-File: figures/esp32-pinout.jpg Graphic file (type jpg)
-<use figures/esp32-pinout.jpg>
-Package pdftex.def Info: figures/esp32-pinout.jpg  used on input line 197.
-(pdftex.def)             Requested size: 364.19667pt x 192.5916pt.
+]
+LaTeX Info: Redefining \sptext on input line 118.
+LaTeX Info: Redefining \. on input line 118.
+LaTeX Info: Redefining \% on input line 118.
+ [4{C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+<figures/qubit.png, id=954, 502.12593pt x 283.81032pt>
+File: figures/qubit.png Graphic file (type png)
+<use figures/qubit.png>
+Package pdftex.def Info: figures/qubit.png  used on input line 121.
+(pdftex.def)             Requested size: 273.14923pt x 154.39423pt.
+<figures/progress-qubits.png, id=960, 284.39583pt x 196.06583pt>
+File: figures/progress-qubits.png Graphic file (type png)
+<use figures/progress-qubits.png>
+Package pdftex.def Info: figures/progress-qubits.png  used on input line 146.
+(pdftex.def)             Requested size: 386.96027pt x 266.79256pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \sptext on input line 208.
-LaTeX Info: Redefining \. on input line 208.
-LaTeX Info: Redefining \% on input line 208.
-[5]
-<figures/raspberry-pico.jpeg, id=946, 304.13625pt x 166.6225pt>
+LaTeX Info: Redefining \sptext on input line 163.
+LaTeX Info: Redefining \. on input line 163.
+LaTeX Info: Redefining \% on input line 163.
+[5{C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./figures/qubit.png>]
+LaTeX Info: Redefining \sptext on input line 201.
+LaTeX Info: Redefining \. on input line 201.
+LaTeX Info: Redefining \% on input line 201.
+ [6 <./figures/progress-qubits.png>]
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 207.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 4.49997pt on input line 207.
+LaTeX Font Info:    Font shape `T1/fve/b/it' in size <10> not available
+(Font)              Font shape `T1/fve/b/sl' tried instead on input line 235.
+LaTeX Font Info:    Font shape `T1/fve/b/sl' will be
+(Font)              scaled to size 8.99994pt on input line 235.
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <7> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 235.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 235.
+LaTeX Font Info:    Font shape `T1/fve/m/it' in size <5> not available
+(Font)              Font shape `T1/fve/m/sl' tried instead on input line 235.
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 4.49997pt on input line 235.
+LaTeX Info: Redefining \sptext on input line 274.
+LaTeX Info: Redefining \. on input line 274.
+LaTeX Info: Redefining \% on input line 274.
+ [7]
+Underfull \vbox (badness 5578) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 346.
+LaTeX Info: Redefining \. on input line 346.
+LaTeX Info: Redefining \% on input line 346.
+ [8]
+LaTeX Info: Redefining \sptext on input line 389.
+LaTeX Info: Redefining \. on input line 389.
+LaTeX Info: Redefining \% on input line 389.
+ [9]
+<figures/esp32-pinout.jpg, id=1061, 1271.75125pt x 672.5125pt>
+File: figures/esp32-pinout.jpg Graphic file (type jpg)
+<use figures/esp32-pinout.jpg>
+Package pdftex.def Info: figures/esp32-pinout.jpg  used on input line 474.
+(pdftex.def)             Requested size: 364.19667pt x 192.5916pt.
+LaTeX Info: Redefining \sptext on input line 477.
+LaTeX Info: Redefining \. on input line 477.
+LaTeX Info: Redefining \% on input line 477.
+ [10]
+<figures/raspberry-pico.jpeg, id=1076, 304.13625pt x 166.6225pt>
 File: figures/raspberry-pico.jpeg Graphic file (type jpg)
 <use figures/raspberry-pico.jpeg>
-Package pdftex.def Info: figures/raspberry-pico.jpeg  used on input line 220.
+Package pdftex.def Info: figures/raspberry-pico.jpeg  used on input line 497.
 (pdftex.def)             Requested size: 273.14923pt x 149.65121pt.
-LaTeX Info: Redefining \sptext on input line 235.
-LaTeX Info: Redefining \. on input line 235.
-LaTeX Info: Redefining \% on input line 235.
- [6 <./figures/esp32-pinout.jpg> <./figures/raspberry-pico.jpeg>]
-<figures/nucleo-l4r5zi.jpg, id=960, 722.7pt x 845.1575pt>
+LaTeX Info: Redefining \sptext on input line 504.
+LaTeX Info: Redefining \. on input line 504.
+LaTeX Info: Redefining \% on input line 504.
+ [11 <./figures/esp32-pinout.jpg> <./figures/raspberry-pico.jpeg>]
+<figures/nucleo-l4r5zi.jpg, id=1092, 722.7pt x 845.1575pt>
 File: figures/nucleo-l4r5zi.jpg Graphic file (type jpg)
 <use figures/nucleo-l4r5zi.jpg>
-Package pdftex.def Info: figures/nucleo-l4r5zi.jpg  used on input line 245.
+Package pdftex.def Info: figures/nucleo-l4r5zi.jpg  used on input line 522.
 (pdftex.def)             Requested size: 273.14923pt x 319.43512pt.
 ) (chapters/desarrollo.tex
 LaTeX Info: Redefining \sptext on input line 25.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [7 <./figures/nucleo-l4r5zi.jpg>] [8
+ [12 <./figures/nucleo-l4r5zi.jpg>]
+LaTeX Info: Redefining \sptext on input line 25.
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ [13] [14
 
 ]
 Cap\'{\i }tulo 3.
-[9] (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[15] (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/03/11 1.10a listings language file
 ) (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/03/11 1.10a listings language file
@@ -1884,7 +1907,7 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 
 
 pdfTeX warning: pdflatex (file ./figures/esp-prog-pinout.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/esp-prog-pinout.pdf, id=993, 803.0pt x 562.1pt>
+<figures/esp-prog-pinout.pdf, id=1128, 803.0pt x 562.1pt>
 File: figures/esp-prog-pinout.pdf Graphic file (type pdf)
 <use figures/esp-prog-pinout.pdf>
 Package pdftex.def Info: figures/esp-prog-pinout.pdf  used on input line 116.
@@ -1895,219 +1918,240 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \sptext on input line 125.
 LaTeX Info: Redefining \. on input line 125.
 LaTeX Info: Redefining \% on input line 125.
-[10]
-LaTeX Info: Redefining \sptext on input line 194.
-LaTeX Info: Redefining \. on input line 194.
-LaTeX Info: Redefining \% on input line 194.
- [11 <./figures/esp-prog-pinout.pdf>]
-LaTeX Info: Redefining \sptext on input line 213.
-LaTeX Info: Redefining \. on input line 213.
-LaTeX Info: Redefining \% on input line 213.
- [12] (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[16]
+LaTeX Info: Redefining \sptext on input line 195.
+LaTeX Info: Redefining \. on input line 195.
+LaTeX Info: Redefining \% on input line 195.
+ [17 <./figures/esp-prog-pinout.pdf>]
+LaTeX Info: Redefining \sptext on input line 214.
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+ [18] (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/03/11 1.10a listings language file
 ) (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/03/11 1.10a (Carsten Heinz)
 )
-LaTeX Info: Redefining \sptext on input line 269.
-LaTeX Info: Redefining \. on input line 269.
-LaTeX Info: Redefining \% on input line 269.
- [13]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 301.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 301.
-LaTeX Info: Redefining \sptext on input line 327.
-LaTeX Info: Redefining \. on input line 327.
-LaTeX Info: Redefining \% on input line 327.
- [14]
-
-LaTeX Warning: Reference `' on page 15 undefined on input line 374.
-
-LaTeX Info: Redefining \sptext on input line 388.
-LaTeX Info: Redefining \. on input line 388.
-LaTeX Info: Redefining \% on input line 388.
-[15]
-LaTeX Info: Redefining \sptext on input line 446.
-LaTeX Info: Redefining \. on input line 446.
-LaTeX Info: Redefining \% on input line 446.
- [16]
-
-LaTeX Warning: Reference `' on page 17 undefined on input line 506.
-
-LaTeX Info: Redefining \sptext on input line 571.
-LaTeX Info: Redefining \. on input line 571.
-LaTeX Info: Redefining \% on input line 571.
-[17]
-LaTeX Info: Redefining \sptext on input line 579.
-LaTeX Info: Redefining \. on input line 579.
-LaTeX Info: Redefining \% on input line 579.
- [18]
-LaTeX Info: Redefining \sptext on input line 619.
-LaTeX Info: Redefining \. on input line 619.
-LaTeX Info: Redefining \% on input line 619.
+LaTeX Info: Redefining \sptext on input line 270.
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
  [19]
-LaTeX Info: Redefining \sptext on input line 684.
-LaTeX Info: Redefining \. on input line 684.
-LaTeX Info: Redefining \% on input line 684.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 302.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 302.
+LaTeX Info: Redefining \sptext on input line 328.
+LaTeX Info: Redefining \. on input line 328.
+LaTeX Info: Redefining \% on input line 328.
  [20]
 
-LaTeX Warning: Reference `' on page 21 undefined on input line 705.
+LaTeX Warning: Reference `' on page 21 undefined on input line 375.
 
-LaTeX Info: Redefining \sptext on input line 748.
-LaTeX Info: Redefining \. on input line 748.
-LaTeX Info: Redefining \% on input line 748.
+LaTeX Info: Redefining \sptext on input line 389.
+LaTeX Info: Redefining \. on input line 389.
+LaTeX Info: Redefining \% on input line 389.
 [21]
+LaTeX Info: Redefining \sptext on input line 447.
+LaTeX Info: Redefining \. on input line 447.
+LaTeX Info: Redefining \% on input line 447.
+ [22]
+<figures/dilithium-check.png, id=1426, 895.345pt x 139.52126pt>
+File: figures/dilithium-check.png Graphic file (type png)
+<use figures/dilithium-check.png>
+Package pdftex.def Info: figures/dilithium-check.png  used on input line 511.
+(pdftex.def)             Requested size: 227.62206pt x 35.46992pt.
 
-LaTeX Warning: Reference `' on page 22 undefined on input line 799.
 
-LaTeX Info: Redefining \sptext on input line 817.
-LaTeX Info: Redefining \. on input line 817.
-LaTeX Info: Redefining \% on input line 817.
-[22]
-Underfull \vbox (badness 1205) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \sptext on input line 904.
-LaTeX Info: Redefining \. on input line 904.
-LaTeX Info: Redefining \% on input line 904.
- [23]
-LaTeX Info: Redefining \sptext on input line 922.
-LaTeX Info: Redefining \. on input line 922.
-LaTeX Info: Redefining \% on input line 922.
- [24]
-Underfull \vbox (badness 5417) has occurred while \output is active []
+LaTeX Info: Redefining \sptext on input line 577.
+LaTeX Info: Redefining \. on input line 577.
+LaTeX Info: Redefining \% on input line 577.
+[23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \sptext on input line 983.
-LaTeX Info: Redefining \. on input line 983.
-LaTeX Info: Redefining \% on input line 983.
+LaTeX Info: Redefining \sptext on input line 577.
+LaTeX Info: Redefining \. on input line 577.
+LaTeX Info: Redefining \% on input line 577.
+ [24 <./figures/dilithium-check.png>]
+LaTeX Info: Redefining \sptext on input line 585.
+LaTeX Info: Redefining \. on input line 585.
+LaTeX Info: Redefining \% on input line 585.
  [25]
-
-LaTeX Warning: Reference `min-max' on page 26 undefined on input line 997.
-
-LaTeX Info: Redefining \sptext on input line 1035.
-LaTeX Info: Redefining \. on input line 1035.
-LaTeX Info: Redefining \% on input line 1035.
-[26]
-LaTeX Info: Redefining \sptext on input line 1098.
-LaTeX Info: Redefining \. on input line 1098.
-LaTeX Info: Redefining \% on input line 1098.
+LaTeX Info: Redefining \sptext on input line 625.
+LaTeX Info: Redefining \. on input line 625.
+LaTeX Info: Redefining \% on input line 625.
+ [26]
+LaTeX Info: Redefining \sptext on input line 691.
+LaTeX Info: Redefining \. on input line 691.
+LaTeX Info: Redefining \% on input line 691.
  [27]
 
-LaTeX Warning: Reference `' on page 28 undefined on input line 1114.
+LaTeX Warning: Reference `' on page 28 undefined on input line 712.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \sptext on input line 1188.
-LaTeX Info: Redefining \. on input line 1188.
-LaTeX Info: Redefining \% on input line 1188.
- [28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \sptext on input line 1196.
-LaTeX Info: Redefining \. on input line 1196.
-LaTeX Info: Redefining \% on input line 1196.
- [29]
-LaTeX Info: Redefining \sptext on input line 1251.
-LaTeX Info: Redefining \. on input line 1251.
-LaTeX Info: Redefining \% on input line 1251.
+LaTeX Info: Redefining \sptext on input line 755.
+LaTeX Info: Redefining \. on input line 755.
+LaTeX Info: Redefining \% on input line 755.
+[28]
+<figures/kyber-check.png, id=1614, 929.4725pt x 139.52126pt>
+File: figures/kyber-check.png Graphic file (type png)
+<use figures/kyber-check.png>
+Package pdftex.def Info: figures/kyber-check.png  used on input line 810.
+(pdftex.def)             Requested size: 227.62206pt x 34.16702pt.
+LaTeX Info: Redefining \sptext on input line 823.
+LaTeX Info: Redefining \. on input line 823.
+LaTeX Info: Redefining \% on input line 823.
+ [29 <./figures/kyber-check.png>]
+LaTeX Info: Redefining \sptext on input line 916.
+LaTeX Info: Redefining \. on input line 916.
+LaTeX Info: Redefining \% on input line 916.
  [30]
+LaTeX Info: Redefining \sptext on input line 934.
+LaTeX Info: Redefining \. on input line 934.
+LaTeX Info: Redefining \% on input line 934.
+ [31]
+Underfull \vbox (badness 5417) has occurred while \output is active []
 
-LaTeX Warning: Reference `' on page 31 undefined on input line 1294.
-
-LaTeX Info: Redefining \sptext on input line 1354.
-LaTeX Info: Redefining \. on input line 1354.
-LaTeX Info: Redefining \% on input line 1354.
-[31]
-LaTeX Info: Redefining \sptext on input line 1374.
-LaTeX Info: Redefining \. on input line 1374.
-LaTeX Info: Redefining \% on input line 1374.
+LaTeX Info: Redefining \sptext on input line 995.
+LaTeX Info: Redefining \. on input line 995.
+LaTeX Info: Redefining \% on input line 995.
  [32]
-LaTeX Info: Redefining \sptext on input line 1432.
-LaTeX Info: Redefining \. on input line 1432.
-LaTeX Info: Redefining \% on input line 1432.
- [33]
-LaTeX Info: Redefining \sptext on input line 1493.
-LaTeX Info: Redefining \. on input line 1493.
-LaTeX Info: Redefining \% on input line 1493.
+
+LaTeX Warning: Reference `min-max' on page 33 undefined on input line 1009.
+
+LaTeX Info: Redefining \sptext on input line 1047.
+LaTeX Info: Redefining \. on input line 1047.
+LaTeX Info: Redefining \% on input line 1047.
+[33]
+LaTeX Info: Redefining \sptext on input line 1110.
+LaTeX Info: Redefining \. on input line 1110.
+LaTeX Info: Redefining \% on input line 1110.
  [34]
+<figures/hqc-check.png, id=1850, 1081.03876pt x 277.035pt>
+File: figures/hqc-check.png Graphic file (type png)
+<use figures/hqc-check.png>
+Package pdftex.def Info: figures/hqc-check.png  used on input line 1130.
+(pdftex.def)             Requested size: 227.62206pt x 58.33124pt.
 
-LaTeX Warning: Reference `' on page 35 undefined on input line 1512.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \sptext on input line 1547.
-LaTeX Info: Redefining \. on input line 1547.
-LaTeX Info: Redefining \% on input line 1547.
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1558--1563
+LaTeX Info: Redefining \sptext on input line 1205.
+LaTeX Info: Redefining \. on input line 1205.
+LaTeX Info: Redefining \% on input line 1205.
+ [35 <./figures/hqc-check.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 1213.
+LaTeX Info: Redefining \. on input line 1213.
+LaTeX Info: Redefining \% on input line 1213.
+ [36]
+LaTeX Info: Redefining \sptext on input line 1268.
+LaTeX Info: Redefining \. on input line 1268.
+LaTeX Info: Redefining \% on input line 1268.
+ [37]
+<figures/mceliece-check.png, id=1928, 412.54124pt x 319.1925pt>
+File: figures/mceliece-check.png Graphic file (type png)
+<use figures/mceliece-check.png>
+Package pdftex.def Info: figures/mceliece-check.png  used on input line 1316.
+(pdftex.def)             Requested size: 227.62206pt x 176.11652pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \sptext on input line 1380.
+LaTeX Info: Redefining \. on input line 1380.
+LaTeX Info: Redefining \% on input line 1380.
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 1389.
+LaTeX Info: Redefining \. on input line 1389.
+LaTeX Info: Redefining \% on input line 1389.
+ [39 <./figures/mceliece-check.png>]
+LaTeX Info: Redefining \sptext on input line 1449.
+LaTeX Info: Redefining \. on input line 1449.
+LaTeX Info: Redefining \% on input line 1449.
+ [40]
+LaTeX Info: Redefining \sptext on input line 1501.
+LaTeX Info: Redefining \. on input line 1501.
+LaTeX Info: Redefining \% on input line 1501.
+ [41]
+<figures/sphincs-check.png, id=2070, 1081.03876pt x 277.035pt>
+File: figures/sphincs-check.png Graphic file (type png)
+<use figures/sphincs-check.png>
+Package pdftex.def Info: figures/sphincs-check.png  used on input line 1542.
+(pdftex.def)             Requested size: 227.62206pt x 58.33124pt.
+LaTeX Info: Redefining \sptext on input line 1559.
+LaTeX Info: Redefining \. on input line 1559.
+LaTeX Info: Redefining \% on input line 1559.
+ [42 <./figures/sphincs-check.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1589--1594
 \T1/fve/m/n/10 Para la ge-ne-ra-ción de nú-me-ros alea-to-rios, se ha uti-li-za-do el ejem-plo pro-pues-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1558--1563
-\T1/fve/m/n/10 to en el re-po-si-to-rio STM32CubeL4 [[][]40[][]]. Es-te ejem-plo se en-cuen-tra en la ru-ta
+Underfull \hbox (badness 10000) in paragraph at lines 1589--1594
+\T1/fve/m/n/10 to en el re-po-si-to-rio STM32CubeL4 [[][]46[][]]. Es-te ejem-plo se en-cuen-tra en la ru-ta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1558--1563
+Underfull \hbox (badness 10000) in paragraph at lines 1589--1594
 \T1/fvm/m/n/10 STM32CubeL4/Projects/NUCLEO-L4R5ZI/Examples/RNG/RNG_MultiRNG\T1/fve/m/n/10 . En es-te ejem-plo, se
  []
 
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 1576.
-<figures/keil_error_5A000.png, id=1970, 181.42781pt x 437.38406pt>
+(Font)              scaled to size 8.99994pt on input line 1607.
+LaTeX Info: Redefining \sptext on input line 1615.
+LaTeX Info: Redefining \. on input line 1615.
+LaTeX Info: Redefining \% on input line 1615.
+[43]
+<figures/keil_error_5A000.png, id=2141, 181.42781pt x 437.38406pt>
 File: figures/keil_error_5A000.png Graphic file (type png)
 <use figures/keil_error_5A000.png>
-Package pdftex.def Info: figures/keil_error_5A000.png  used on input line 1589.
+Package pdftex.def Info: figures/keil_error_5A000.png  used on input line 1620.
 (pdftex.def)             Requested size: 136.57462pt x 329.25856pt.
-<figures/keil_error_5B500.png, id=1971, 181.42781pt x 435.87843pt>
+<figures/keil_error_5B500.png, id=2142, 181.42781pt x 435.87843pt>
 File: figures/keil_error_5B500.png Graphic file (type png)
 <use figures/keil_error_5B500.png>
-Package pdftex.def Info: figures/keil_error_5B500.png  used on input line 1596.
+Package pdftex.def Info: figures/keil_error_5B500.png  used on input line 1627.
 (pdftex.def)             Requested size: 136.57462pt x 328.12514pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \sptext on input line 1619.
-LaTeX Info: Redefining \. on input line 1619.
-LaTeX Info: Redefining \% on input line 1619.
-[36]) (chapters/resultados.tex
+LaTeX Info: Redefining \sptext on input line 1663.
+LaTeX Info: Redefining \. on input line 1663.
+LaTeX Info: Redefining \% on input line 1663.
+ [44 <./figures/keil_error_5A000.png> <./figures/keil_error_5B500.png>]) (chapters/resultados.tex
 LaTeX Info: Redefining \sptext on input line 25.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [37 <./figures/keil_error_5A000.png> <./figures/keil_error_5B500.png>]
-LaTeX Info: Redefining \sptext on input line 25.
-LaTeX Info: Redefining \. on input line 25.
-LaTeX Info: Redefining \% on input line 25.
- [38]
-Cap\'{\i }tulo 4.
-[39
+ [45] [46
 
 ]
-<figures/Dilithium.pdf, id=2031, 409.53pt x 337.26pt>
+Cap\'{\i }tulo 4.
+[47]
+<figures/Dilithium.pdf, id=2196, 407.5225pt x 337.26pt>
 File: figures/Dilithium.pdf Graphic file (type pdf)
 <use figures/Dilithium.pdf>
 Package pdftex.def Info: figures/Dilithium.pdf  used on input line 101.
-(pdftex.def)             Requested size: 273.14923pt x 224.95952pt.
+(pdftex.def)             Requested size: 273.14923pt x 226.06595pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/Kyber.pdf, id=2032, 403.5075pt x 337.26pt>
+<figures/Kyber.pdf, id=2197, 407.5225pt x 337.26pt>
 File: figures/Kyber.pdf Graphic file (type pdf)
 <use figures/Kyber.pdf>
 Package pdftex.def Info: figures/Kyber.pdf  used on input line 112.
-(pdftex.def)             Requested size: 273.14923pt x 228.30452pt.
+(pdftex.def)             Requested size: 273.14923pt x 226.06595pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Info: Redefining \sptext on input line 120.
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
-[40]
-<figures/HQC.pdf, id=2047, 403.5075pt x 337.26pt>
+[48]
+<figures/HQC.pdf, id=2212, 407.5225pt x 337.26pt>
 File: figures/HQC.pdf Graphic file (type pdf)
 <use figures/HQC.pdf>
 Package pdftex.def Info: figures/HQC.pdf  used on input line 125.
-(pdftex.def)             Requested size: 273.14923pt x 228.30452pt.
+(pdftex.def)             Requested size: 273.14923pt x 226.06595pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2116,17 +2160,22 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \sptext on input line 25.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [41 <./figures/Dilithium.pdf>]
+ [49 <./figures/Dilithium.pdf>]
 LaTeX Info: Redefining \sptext on input line 25.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [42 <./figures/Kyber.pdf> <./figures/HQC.pdf>]
+ [50 <./figures/Kyber.pdf> <./figures/HQC.pdf>]
 Cap\'{\i }tulo 5.
-) (biblio/bibliography.tex [43
+) (biblio/bibliography.tex [51
 
-] [44
+] [52
 
 ]
+
+Package biblatex Warning: No driver for 'unknown'.
+(biblatex)                Using fallback driver on input line 284.
+
+
 Underfull \hbox (badness 1629) in paragraph at lines 284--284
 []\T1/fve/m/sl/10 ESP32-WROOM-32E ESP32-WROOM-32UE Da-tasheet\T1/fve/m/n/10 , 2023. di-rec-ción: [][]$\T1/fvm/m/n/10 https : / / www .
  []
@@ -2136,11 +2185,18 @@ Underfull \hbox (badness 4048) in paragraph at lines 284--284
 []\T1/fve/m/sl/10 RP2040\T1/fve/m/n/10 , 2012. di-rec-ción: [][]$\T1/fvm/m/n/10 https : / / www . raspberrypi . com / documentation /
  []
 
-[45]
+[53]
 Underfull \hbox (badness 1668) in paragraph at lines 284--284
 []\T1/fve/m/sl/10 Raspberry Pi Do-cu-men-ta-tion\T1/fve/m/n/10 , 2023. di-rec-ción: [][]$\T1/fvm/m/n/10 https : / / www . raspberrypi . com /
  []
 
+Package textcomp Info: Symbol \textmu not provided by
+(textcomp)             font family fve in TS1 encoding.
+(textcomp)             Default family used instead on input line 284.
+LaTeX Info: Redefining \sptext on input line 284.
+LaTeX Info: Redefining \. on input line 284.
+LaTeX Info: Redefining \% on input line 284.
+[54]
 Package textcomp Info: Symbol \textmu not provided by
 (textcomp)             font family fve in TS1 encoding.
 (textcomp)             Default family used instead on input line 284.
@@ -2159,32 +2215,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--284
 \T1/fvm/m/n/10 Q5YboJ5Ot3vMdqkAWvwjk76camwz0fokZ6i2rXcC100bIFjenlbyFMyO912 _
  []
 
-LaTeX Info: Redefining \sptext on input line 284.
-LaTeX Info: Redefining \. on input line 284.
-LaTeX Info: Redefining \% on input line 284.
-[46]) (presupuesto/presupuesto.tex
+) (presupuesto/presupuesto.tex
 LaTeX Info: Redefining \sptext on input line 31.
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
- [47] [48
+ [55] [56
 
 ]
 Ap\'{e}ndice A.
-[49])
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 67.
+[57])
 LaTeX Info: Redefining \sptext on input line 249.
 LaTeX Info: Redefining \. on input line 249.
 LaTeX Info: Redefining \% on input line 249.
- [50] (cover/backpage.tex (cover/backpage-tfg-uah.tex [51
+ [58] (cover/backpage.tex (cover/backpage-tfg-uah.tex [59
 
 
 ]
-<./logos/uah/01_logo-vA_pant293.pdf, id=2250, 607.48354pt x 209.12729pt>
+<./logos/uah/01_logo-vA_pant293.pdf, id=2426, 607.48354pt x 209.12729pt>
 File: ./logos/uah/01_logo-vA_pant293.pdf Graphic file (type pdf)
 <use ./logos/uah/01_logo-vA_pant293.pdf>
 Package pdftex.def Info: ./logos/uah/01_logo-vA_pant293.pdf  used on input line 66.
 (pdftex.def)             Requested size: 206.62509pt x 71.13188pt.
 ))
-<logos/logoEPS-UAH.jpg, id=2251, 401.5pt x 292.09125pt>
+<logos/logoEPS-UAH.jpg, id=2427, 401.5pt x 292.09125pt>
 File: logos/logoEPS-UAH.jpg Graphic file (type jpg)
 <use logos/logoEPS-UAH.jpg>
 Package pdftex.def Info: logos/logoEPS-UAH.jpg  used on input line 258.
@@ -2193,7 +2248,7 @@ Package pdftex.def Info: logos/logoEPS-UAH.jpg  used on input line 258.
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 ) (C:\Users\Ruben\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [52
+) [60
 
  <./logos/logoEPS-UAH.jpg> <./logos/uah/01_logo-vA_pant293.pdf>] (book.aux
 LaTeX Info: Redefining \sptext on input line 21.
@@ -2212,23 +2267,23 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 803AB3B22F746FD01A4428CEB3AFD426;16893.
+(rerunfilecheck)             Checksum: DA1AB47AE6F3BF016D1A1598360DF2C6;17253.
 Package logreq Info: Writing requests to 'book.run.xml'.
 \openout1 = `book.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52937 strings out of 474423
- 989510 string characters out of 5741719
+ 53162 strings out of 474423
+ 993709 string characters out of 5741719
  2358496 words of memory out of 5000000
- 73235 multiletter control sequences out of 15000+600000
- 646989 words of font info for 111 fonts, out of 8000000 for 9000
+ 73414 multiletter control sequences out of 15000+600000
+ 645084 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  104i,16n,125p,2469b,2947s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Ruben\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fveb8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fveb8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmb8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb>
-Output written on book.pdf (74 pages, 1690511 bytes).
+ <C:\Users\Ruben\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1000.pk><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fveb8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fveb8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmb8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ruben/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb>
+Output written on book.pdf (80 pages, 1887972 bytes).
 PDF statistics:
- 2550 PDF objects out of 2984 (max. 8388607)
- 1041 named destinations out of 1200 (max. 500000)
- 813 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2741 PDF objects out of 2984 (max. 8388607)
+ 1092 named destinations out of 1200 (max. 500000)
+ 859 words of extra memory for PDF output out of 10000 (max. 10000000)
 

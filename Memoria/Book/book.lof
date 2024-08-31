@@ -2,22 +2,28 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Bit clásico y qubit~\blx@tocontentsinit {0}\cite {Rietsche2022}.}}{3}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces ESP32-WROOM-32E en Devkitc v4 con \textit {pinout}~\blx@tocontentsinit {0}\cite {esp32-pinout}.}}{6}{figure.caption.51}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Raspberry Pi Pico~\blx@tocontentsinit {0}\cite {rp2040-img}.}}{6}{figure.caption.53}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama del dispositivo NUCLEO-L4R5ZI~\blx@tocontentsinit {0}\cite {nucleo-img}.}}{7}{figure.caption.55}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Bit clásico y qubit~\blx@tocontentsinit {0}\cite {Rietsche2022}.}}{5}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Progreso en el número de qubits de un computador cuántico~\blx@tocontentsinit {0}\cite {progress-qubits}.}}{6}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces ESP32-WROOM-32E en Devkitc v4 con \textit {pinout}~\blx@tocontentsinit {0}\cite {esp32-pinout}.}}{11}{figure.caption.79}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Raspberry Pi Pico~\blx@tocontentsinit {0}\cite {rp2040-img}.}}{11}{figure.caption.81}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagrama del dispositivo NUCLEO-L4R5ZI~\blx@tocontentsinit {0}\cite {nucleo-img}.}}{12}{figure.caption.83}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama del dispositivo ESP-Prog~\blx@tocontentsinit {0}\cite {esp-prog-pinout}.}}{11}{figure.caption.79}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Árbol de ficheros del proyecto Dilithium.}}{12}{figure.caption.81}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Árbol de ficheros del proyecto Kyber.}}{18}{figure.caption.301}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Árbol de ficheros del proyecto HQC-128.}}{24}{figure.caption.473}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Árbol de ficheros del proyecto MCEliece348864.}}{29}{figure.caption.623}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Árbol de ficheros del proyecto Sphincs.}}{32}{figure.caption.703}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Errores de manejo de memoria \textit {stack} al ejecutar McEliece348864.}}{37}{figure.caption.840}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama del dispositivo ESP-Prog~\blx@tocontentsinit {0}\cite {esp-prog-pinout}.}}{17}{figure.caption.107}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Árbol de ficheros del proyecto Dilithium.}}{18}{figure.caption.109}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Comprobación de ejecución de algoritmo Dilithium.}}{24}{figure.caption.328}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Árbol de ficheros del proyecto Kyber.}}{25}{figure.caption.330}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Comprobación de ejecución de algoritmo Kyber.}}{29}{figure.caption.486}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Árbol de ficheros del proyecto HQC-128.}}{31}{figure.caption.503}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Comprobación de ejecución de algoritmo HQC-128.}}{35}{figure.caption.652}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Árbol de ficheros del proyecto MCEliece348864.}}{36}{figure.caption.654}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Comprobación de ejecución de algoritmo McEliece348864.}}{39}{figure.caption.733}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Árbol de ficheros del proyecto Sphincs.}}{39}{figure.caption.735}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Comprobación de ejecución de algoritmo Sphincs.}}{42}{figure.caption.857}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Errores de manejo de memoria \textit {stack} al ejecutar McEliece348864.}}{44}{figure.caption.873}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Tiempo de ejecución medio para el algoritmo Dilithium.}}{41}{figure.caption.879}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Tiempo de ejecución medio para el algoritmo Kyber.}}{42}{figure.caption.880}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Tiempo de ejecución medio para el algoritmo HQC.}}{42}{figure.caption.882}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tiempo de ejecución medio para el algoritmo Dilithium.}}{49}{figure.caption.914}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Tiempo de ejecución medio para el algoritmo Kyber.}}{50}{figure.caption.915}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Tiempo de ejecución medio para el algoritmo HQC.}}{50}{figure.caption.917}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagrama de Gantt}}{49}{figure.caption.896}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagrama de Gantt}}{57}{figure.caption.931}%

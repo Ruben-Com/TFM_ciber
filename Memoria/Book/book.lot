@@ -2,11 +2,16 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Diferencias entre versiones de Dilithium.}}{5}{table.caption.40}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Diferencias entre versiones de Dilithium~\blx@tocontentsinit {0}\cite {dilithium_spec}.}}{8}{table.caption.43}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Diferencias entre versiones de Kyber~\blx@tocontentsinit {0}\cite {kyber_spec}.}}{8}{table.caption.48}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Tamaños de las diferentes versiones de Sphincs+~\blx@tocontentsinit {0}\cite {sphincs_spec}.}}{9}{table.caption.50}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Diferencias entre versiones de McEliece~\blx@tocontentsinit {0}\cite {mceliece_spec}.}}{10}{table.caption.72}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Diferencias entre versiones de HQC~\blx@tocontentsinit {0}\cite {hqc_spec}.}}{10}{table.caption.74}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Diferencias entre versiones de Falcon~\blx@tocontentsinit {0}\cite {falcon_spec}.}}{10}{table.caption.76}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Recursos hardware usados}}{50}{table.caption.898}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Recursos humanos}}{50}{table.caption.900}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces Presupuesto de ejecución material}}{50}{table.caption.902}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Recursos hardware usados}}{58}{table.caption.933}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Recursos humanos}}{58}{table.caption.935}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces Presupuesto de ejecución material}}{58}{table.caption.937}%

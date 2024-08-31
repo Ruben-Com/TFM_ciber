@@ -36,7 +36,7 @@ A continuación, se explica como se ha trabajado con cada uno de ellos y como se
 
 Para llevar a cabo una selección de los dispositivos a utilizar a lo largo de este proyecto, se ha realizado una búsqueda de los dispositivos en los que pueda existir un interés del estudio de compatibilidad y rendimiento de estos algoritmos.
 %Esta selección está limitada a dispositivos programables mediante herramientas gratuitas y 
-El criterio principal que se ha utilizado para la selección ha sido el uso que reciben los dispositivos, ya que, al disponer de una utilización más extensiva, conllevará su inclusión en funciones y operaciones sensbiles y, por ende, sea necesario mantener ectualizado en cuanto a esquemas de cifrado empleado.
+El criterio principal que se ha utilizado para la selección ha sido el uso que reciben los dispositivos, ya que, al disponer de una utilización más extensiva, conllevará su inclusión en funciones y operaciones sensbiles y, por ende, sea necesario mantener actualizado en cuanto a esquemas de cifrado empleado.
 
 Por ello, los dispositivos seleccionados han sido:
 
@@ -133,7 +133,8 @@ Para poder utilizarlo correctamente, se deberá llevar a cabo la siguiente conex
     \item Pin 6 (ESP\_IO0) de DC3-6P de ESP-Prog al pin 0 del dispositivo ESP32.
 \end{itemize}
 
-%TODO: indicar modo de uso (comandos o cualquier mierda)
+A la hora de carga el \textit{software}, se deberá hacer mediante una conexión JTAG.
+Sin embargo, si no se utilizase el dispositivo ESP-Prog, se debería emplear una conexión \ac{UART}.
 
 
 \subsection{Dilithium}\label{subsec:dilithium}
@@ -373,7 +374,7 @@ LLevando a cabo distinta comprobaciones, se encontró que le error sucedía en l
 Por ello, se ha requerido utilizar el depurador ESP-Prog.
 A través del depurador, se ha concluido que el error surge del error que se aprecia en la Captura~\ref{}.
 
-%TODO: captura error depurador
+%//TODO: captura error depurador
 
 Según se ha encontrado en distintas entradas del foro oficial de ESP32~\cite{esp32-forum1}~\cite{esp32-forum2}~\cite{esp32-forum2}, este error se debe, sin duda, a un problema en la memoria del dispositivo.
 En una de estas entradas, se sugiere la posibilidad de un \textit{overflow} del \textit{stack} sea el causante de este problema.
@@ -503,9 +504,14 @@ Una vez realizadas todas estas modificaciones, se han adaptado las llamadas a la
 
 Tras completar todos los pasos indicados previamente, se lleva a cabo la ejecución del algoritmo.
 Esta ejecución se lleva a cabo mediante el programa mostrado en el Código~\ref{lst:dilithium-main}.
-El resultado de esta ejecución se muestra en la Captura~\ref{}.
+El resultado de esta ejecución se muestra en la Captura~\ref{fig:dilithium-check}.
 
-%TODO: ejecución Dilithium
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/dilithium-check.png}
+    \caption{Comprobación de ejecución de algoritmo Dilithium.}
+    \label{fig:dilithium-check}
+\end{figure}
 
 
 
@@ -612,8 +618,8 @@ Para ello, se ha creado el archivo \texttt{main.c}, el cual está formado por el
 En primer lugar, se llama a la función \texttt{crypto\_kem\_keypair}, encargada de generar las claves tanto pública como privada a utilizar.
 La clave pública se almacenará en la variable \texttt{pk} mientras que la clave privada estará representada por \texttt{sk}.
 Si esta generación fuese errónea, la ejecución finalizaría.
-En caso contrario, se llevaría a cabo la generación del secreto compartido (\texttt{ss\_pub}) y del cifrado (\texttt{ct}) haciendo uso de la clave pública mediante la función \texttt{crypto\_kem\_enc}.
-A continuación, se utiliza la función \texttt{crypto\_kem\_dec}, a la cual se entrega el cifrado \texttt{ct} generado por la función anterior y la clave privada y devuelve el secreto compartido \texttt{ss\_priv}, el cual, si la ejecución ha sido correcta, debería coincidir con el secreto generado anteriormente \texttt{ss\_pub}.
+En caso contrario, se llevaría a cabo la generación del secreto compartido (\texttt{ss\_pub}) y del texto cifrado (\texttt{ct}) haciendo uso de la clave pública mediante la función \texttt{crypto\_kem\_enc}.
+A continuación, se utiliza la función \texttt{crypto\_kem\_dec}, a la cual se entrega el texto cifrado \texttt{ct} generado por la función anterior y la clave privada y devuelve el secreto compartido \texttt{ss\_priv}, el cual, si la ejecución ha sido correcta, debería coincidir con el secreto generado anteriormente \texttt{ss\_pub}.
 Para finalizar, se lleva a cabo esta verificación y se libera la memoria correspondiente a las variables creadas al inicio del programa.
 
 \begin{lstlisting}[label={lst:kyber-main},style=Cnice,firstnumber=1,caption={Archivo \texttt{Kyber/main/main.c}.}]
@@ -679,6 +685,7 @@ void app_main (void)
 
 Como se puede observar en el Código~\ref{lst:kyber-main}, se hace referencia al fichero \texttt{main.h}.
 Este fichero únicamente contiene la especificación de la versión del algoritmo mediante la definición de \texttt{KYBER\_K}, como se muestra en el Código~\ref{lst:kyber-mainh}.
+En este código, si \texttt{KYBER\_K} se hace uso de Kyber512, si vale 3 se utiliza Kyber768 y, si vale 4, se emplea Kyber1024.
 También, se elimina la definición previa de \texttt{\_\_linux\_\_} y la definición de \texttt{ESP32}, cuyo motivo se trata en la apartado~\ref{subsubsec:dilithium-random}.
 
 \begin{lstlisting}[label={lst:kyber-mainh},style=Cnice,firstnumber=1,caption={Archivo \texttt{Kyber/main/include/main.h}.}]
@@ -704,7 +711,7 @@ También, se elimina la definición previa de \texttt{\_\_linux\_\_} y la defini
 
 De la misma manera que Dilithium suponía un \textit{overflow} en el \textit{stack} reservado, Kyber también, como se puede comprobar en la Figura~\ref{}.
 
-%TODO: captura error depurador
+%//TODO: captura error depurador
 
 Por ello, se han seguido los mismos pasos y se ha hecho uso de la \textit{heap} cambiando las variables estáticas que más memoria requerían a ser variables dinámicas.
 El archivo en ser modificado ha sido el archivo \texttt{Kyber/main/src/indcpa.c}.
@@ -769,7 +776,7 @@ void indcpa_enc(uint8_t c[KYBER_INDCPA_BYTES], const uint8_t m[KYBER_INDCPA_MSGB
 }
 \end{lstlisting}
 
-En el Código~\ref{lst:kyber-enc-dyn} se observa la modificación realizada en la función encargada de generar el secreto compartido y el cifrado.
+En el Código~\ref{lst:kyber-enc-dyn} se observa la modificación realizada en la función encargada de generar el secreto compartido y el texto cifrado.
 Para ello, se han modificado las variables del tipo \texttt{polyvec} y del tipo \texttt{poly}, aunque estas últimas requieren una cantidad de memoria mucho menor.
 
 \begin{lstlisting}[label={lst:kyber-dec-dyn},style=Cnice,firstnumber=1,caption={Modificación de la función \texttt{indcpa\_dec} en el archivo \texttt{Kyber/main/src/indcpa.c}.}]
@@ -790,15 +797,20 @@ void indcpa_dec(uint8_t m[KYBER_INDCPA_MSGBYTES], const uint8_t c[KYBER_INDCPA_B
 }
 \end{lstlisting}
 
-La última función modificada ha sido la encargad de obtener el secreto compartido apartir del cifrado y la clave privada, \texttt{indcpa\_dec}.
+La última función modificada ha sido la encargad de obtener el secreto compartido apartir del texto cifrado y la clave privada, \texttt{indcpa\_dec}.
 Siguiendo los cambios realizados con anterioridad, se han modificado las variables del tipo \texttt{polyvec} y \texttt{poly}.
 
 \subsubsection{Comprobación del algoritmo}\label{subsubsec:kyber-compro}
 
 Para finalizar con este algoritmo, se ha llevado a cabo la comprobación de su funcionamiento utilizando el Código~\ref{lst:kyber-main}.
-El resultado de esta ejecución se muestra en la Captura~\ref{}.
+El resultado de esta ejecución se muestra en la Captura~\ref{fig:kyber-check}.
 
-%TODO: ejecución Kyber
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/kyber-check.png}
+    \caption{Comprobación de ejecución de algoritmo Kyber.}
+    \label{fig:kyber-check}
+\end{figure}
 
 
 
@@ -1010,8 +1022,8 @@ Para poder comprobar el funcionamiento del algoritmo, se ha creado el fichero \t
 En este fichero, se inicializará la librería de entrada y salida para poder conocer el progreso de la ejecución del algoritmo y la inicialización de las variables a utilizar a lo largo del proceso y se llevará a cabo un bucle en el que se llame a las funciones que componen el algoritmo.
 En este caso, se ha utilizado los mismos nombres de variables que en el caso de Dilithium~\ref{subsubsec:dilithium-main}.
 La función \texttt{crypto\_kem\_keypair} es la encargada de generar la clave pública (\texttt{pk}) y privada (\texttt{sk}).
-Una vez se han generado las claves, se hace uso de la función \texttt{crypto\_kem\_enc} para generar el secreto compartido (\texttt{ss\_pub}) y el cifrado (\texttt{ct}) con la clave pública.
-A continuación, se lleva a cabo la generación del secreto compartido \texttt{ss\_priv} con el cifrado y la clave privada.
+Una vez se han generado las claves, se hace uso de la función \texttt{crypto\_kem\_enc} para generar el secreto compartido (\texttt{ss\_pub}) y el texto cifrado (\texttt{ct}) con la clave pública.
+A continuación, se lleva a cabo la generación del secreto compartido \texttt{ss\_priv} con el texto cifrado y la clave privada.
 Finalmente, se lleva a cabo una comprobación entre ambos secretos compartidos y, si coinciden, la ejecución ha sido exitosa.
 
 \begin{lstlisting}[label={lst:hqc-main},style=Cnice,firstnumber=1,caption={Archivo \texttt{HQC-128/main.c}.}]
@@ -1111,9 +1123,14 @@ También, se elimina la definición de la macro \texttt{\_\_linux\_\_} y se defi
 
 \subsubsection{Comprobación del algoritmo}\label{subsubsec:hqc-comp}
 
-Una vez realizados los pasos descritos anteriormente, se ejecuta la comprobación del algoritmo ante el cual se obtiene la Captura~\ref{}.
+Una vez realizados los pasos descritos anteriormente, se ejecuta la comprobación del algoritmo ante el cual se obtiene la Captura~\ref{fig:hqc-check}.
 
-%TODO: comprobación HQC-128
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/hqc-check.png}
+    \caption{Comprobación de ejecución de algoritmo HQC-128.}
+    \label{fig:hqc-check}
+\end{figure}
 
 
 \subsection{McEliece348864}\label{subsec:mceliece}
@@ -1284,16 +1301,25 @@ endif()
 
 \subsubsection{Fichero de comprobación}\label{subsubsec:mceliece-main}
 
-Para la ocmprobación del algoritmo, se ha utilizado el mismo archivo descrito en el apartado~\ref{subsubsec:hqc-main} ya que ambos incluyen funciones con el mismo nombre.
+Para la comprobación del algoritmo, se ha utilizado el mismo archivo descrito en el apartado~\ref{subsubsec:hqc-main} ya que ambos incluyen funciones con el mismo nombre.
 Únicamente se diferencian en el tamaño de las variables, lo cual viene indicado por la macro \texttt{PQCLEAN\_NAMESPACE} especcificada en el archivo CMakeLists.txt.
+Además, las variables de claves pública y privada hacen uso de memoria dinámica en vez de memoria estática.
 
 
 \subsubsection{Comprobación del algoritmo}\label{subsubsec:mceliece-comp}
 
 Una vez completados estos pasos, se ha ejecutado el algoritmo utilizando el fichero descrito en el apartado~\ref{subsubsec:mceliece}.
-El resultado de esta comprobación ha sido el mostrado en la Figura~\ref{}.
+El resultado de esta comprobación ha sido el mostrado en la Figura~\ref{fig:mceliece-check}.
 
-%TODO: captura ejecución
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/mceliece-check.png}
+    \caption{Comprobación de ejecución de algoritmo McEliece348864.}
+    \label{fig:mceliece-check}
+\end{figure}
+
+Como se puede verificar en la Figura~\ref{fig:mceliece-check}, la ejecución de este algoritmo arroja un error de memoria insuficiente.
+Este error se genera al reservar memoria para las variables de las claves pública y privada.
 
 
 \subsection{Sphincs}\label{subsec:sphincs}
@@ -1509,9 +1535,14 @@ int main() {
 
 \subsubsection{Comprobación del algoritmo}\label{subsubsec:sphincs-comp}
 
-Finalmente, se ha llevado a cabo la ejecución del fichero de comprobación y se ha obtenido el resultado mostrado en la Captura~\ref{}.
+Finalmente, se ha llevado a cabo la ejecución del fichero de comprobación y se ha obtenido el resultado mostrado en la Captura~\ref{fig:sphincs-check}.
 
-%TODO: captura comprobación
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/sphincs-check.png}
+    \caption{Comprobación de ejecución de algoritmo Sphincs.}
+    \label{fig:sphincs-check}
+\end{figure}
 
 
 
@@ -1631,17 +1662,34 @@ Por ello, se debe asignar un tamaño mínimo a la memoria \textit{stack} suficie
 La cantidad de memoria utilizada finalmente ha sido 0x5D800.
 
 
-\subsubsection{Función de cifrado y descifrado}\label{subsubsec:mceliece-dec-enc}
+\subsubsection{Función de encapsulado y desencapsulado}\label{subsubsec:mceliece-dec-enc}
 
 Como se ha indicado en la Subsección~\ref{subsubsec:mceliece-startup}, para la ejecución de la función \texttt{pk\_gen} se ha de aumentar el tamaño de la memoria \textit{stack} casi hasta el máximo posible.
 Esto cubre únicamente la generación de claves del algoritmo.
-Al incluir las funciones de cifrado y descifrado se obtiene el mismo error que se recibía inicialmente para la función de generación de claves.
-Esto hace que no sea viable la ejecución de la función de cifrado y descifrado del algoritmo ya que no son manejables debido al tamaño disponible de memoria.
+Al incluir las funciones de encapsulado y desencapsulado se obtiene el mismo error que se recibía inicialmente para la función de generación de claves.
+Esto hace que no sea viable la ejecución de la función de encapsulado y desencapsulado del algoritmo ya que no son manejables debido al tamaño disponible de memoria.
 
 
 \subsection{PQM4}\label{subsec:pqm4}
 
+Para la ejecución de ortos algoritmos, se ha utilizado el repositorio existente PQM4~\cite{pqm4}.
+Este repositorio contiene implementaciones de distintos algoritmos postcuánticos diseñadas para su uso en dispositivos que empleen microcontroladores pertenecientes a la familia ARM Cortex-M4.
+Dentro de este repositorio, se pueden encontrar \textit{scripts} en Python 3 que llevan a cabo diferentes medidas de la ejecución de los distintos algoritmos en el dispositivo.
+Estas medidas son el tiempo necesario para su ejecución, la cantidad de memoria \textit{stack} utilizada y el tamaño del código.
+Algunas de las plataformas soportadas son Nucleo-L4R5ZI, Nucleo-L476RG, CW308T-STM32F3 y MPS2-AN386.
 
+Para poder utilizar este \textit{software}, se debe instalar el paquete \texttt{arm-none-eabi-gcc} y OpenOCD.
+Además, se debe utilizar una versión de Python igual o superior a la versión 3.8.
+
+Para la obtención de las medidas de, por ejemplo, el algoritmo Bikel1, se ha de ejecutar el comando mostrado en el Código~\ref{lst:pqm4}.
+
+\begin{lstlisting}[label={lst:pqm4},style=Cnice,firstnumber=1,caption={Comando para la obtención de medidas utilizando PQM4.}]
+python3 benchmarks.py bikel1 --platform nucleo-l4r5zi --uart /dev/ttyACM1
+\end{lstlisting}
+
+Este comando arrojará las medidas obtenidas en diferentes archivos (según medida obtenida y algoritmo comprobado) dentro del directorio llamado \texttt{benchmarks}.
+
+Para este proyecto, se ha llevado a cabo las medidas de los algoritmos Falcon (versiones 512 y 1024), Dilithium (versiones 2, 3 y 5), Kyber (versiones 2, 3 y 4), HQC (versiones 128, 192 y 256) y Bikel (versiones 1 y 3).
 
 
 %%% Local Variables:

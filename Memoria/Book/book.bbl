@@ -84,6 +84,30 @@
       \verb https://doi.org/10.1007/s12525-022-00570-y
       \endverb
     \endentry
+    \entry{progress-qubits}{unknown}{}{}
+      \name{author}{1}{}{%
+        {{hash=698e1f507732146086178e426728da06}{%
+           family={Ezratty},
+           familyi={E\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{698e1f507732146086178e426728da06}
+      \strng{fullhash}{698e1f507732146086178e426728da06}
+      \strng{fullhashraw}{698e1f507732146086178e426728da06}
+      \strng{bibnamehash}{698e1f507732146086178e426728da06}
+      \strng{authorbibnamehash}{698e1f507732146086178e426728da06}
+      \strng{authornamehash}{698e1f507732146086178e426728da06}
+      \strng{authorfullhash}{698e1f507732146086178e426728da06}
+      \strng{authorfullhashraw}{698e1f507732146086178e426728da06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Is there a Moore's law for quantum computing?}
+      \field{year}{2023}
+    \endentry
     \entry{dilithium}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=d73f5269a295977070bf92d05cf9415e}{%
@@ -100,8 +124,8 @@
       \strng{authornamehash}{d73f5269a295977070bf92d05cf9415e}
       \strng{authorfullhash}{d73f5269a295977070bf92d05cf9415e}
       \strng{authorfullhashraw}{d73f5269a295977070bf92d05cf9415e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{CRYSTALS}
@@ -118,8 +142,8 @@
       \endverb
     \endentry
     \entry{nist_sel}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{title}{Selected Algorithms 2022}
       \field{urlday}{7}
@@ -167,8 +191,8 @@
       \strng{editornamehash}{b63088e6d52b8ebc6003a1880e288050}
       \strng{editorfullhash}{b63088e6d52b8ebc6003a1880e288050}
       \strng{editorfullhashraw}{b63088e6d52b8ebc6003a1880e288050}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We demonstrate how the framework that is used for creating efficient number-theoretic ID and signature schemes can be transferred into the setting of lattices. This results in constructions of the most efficient to-date identification and signature schemes with security based on the worst-case hardness of problems in ideal lattices. In particular, our ID scheme has communication complexity of around 65,000 bits and the length of the signatures produced by our signature scheme is about 50,000 bits. All prior lattice-based identification schemes required on the order of millions of bits to be transferred, while all previous lattice-based signature schemes were either stateful, too inefficient, or produced signatures whose lengths were also on the order of millions of bits. The security of our identification scheme is based on the hardness of finding the approximate shortest vector to within a factor of {\$}{\backslash}tilde{\{}O{\}}(n^2){\$}in the standard model, while the security of the signature scheme is based on the same assumption in the random oracle model. Our protocols are very efficient, with all operations requiring {\$}{\backslash}tilde{\{}O{\}}(n){\$}time.}
@@ -180,8 +204,8 @@
       \range{pages}{19}
     \endentry
     \entry{dilithium_spec}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{title}{CRYSTALS-Dilithium}
       \field{urlday}{7}
@@ -197,8 +221,8 @@
       \endverb
     \endentry
     \entry{kyber_spec}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{CRYSTALS-Kyber}
       \field{urlday}{7}
@@ -213,9 +237,112 @@
       \verb https://pq-crystals.org/kyber/data/kyber-specification-round3-20210131.pdf
       \endverb
     \endentry
+    \entry{lamport1979constructing}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=5d77435450d10a850a5b58577b9a456b}{%
+           family={Lamport},
+           familyi={L\bibinitperiod},
+           given={Leslie},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{fullhash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{fullhashraw}{5d77435450d10a850a5b58577b9a456b}
+      \strng{bibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorfullhashraw}{5d77435450d10a850a5b58577b9a456b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{At a coffee house in Berkeley around 1975, Whitfield Diffie described a problem to me that he had been trying to solve: constructing a digital signature for a document. I immediately proposed a solution. Though not very practical--it required perhaps 64 bits of published key to sign a single bit--it was the first digital signature algorithm. Diffie and Hellman mention it in their classic paper: Whitfield Diffie and Martin E. Hellman. New Directions in Cryptography. IEEE Transactions on Information Theory IT-22, 6 (1976), 644-654. (I think it's at the bottom right of page 650.) In 1978, Michael Rabin published a paper titled Digitalized Signatures containing a more practical scheme for generating digital signatures of documents. (I don't remember what other digital signature algorithms had already been proposed.) However, his solution had some drawbacks that limited its utility. This report describes an improvement to Rabin's algorithm that eliminates those drawbacks. I'm not sure why I never published this report. However, I think it was because, after writing it, I realized that the algorithm could be fairly easily derived directly from Rabin's algorithm. So, I didn't feel that it added much to what Rabin had done. However, I've been told that this paper is cited in the cryptography literature and is considered significant, so perhaps I was wrong.}
+      \field{edition}{SRI International}
+      \field{month}{10}
+      \field{note}{This paper was published by IEEE in the Proceedings of HICSS-43 in January, 2010.}
+      \field{number}{CSL-98}
+      \field{title}{Constructing Digital Signatures from a One Way Function}
+      \field{type}{techreport}
+      \field{year}{1979}
+      \verb{urlraw}
+      \verb https://www.microsoft.com/en-us/research/publication/constructing-digital-signatures-one-way-function/
+      \endverb
+      \verb{url}
+      \verb https://www.microsoft.com/en-us/research/publication/constructing-digital-signatures-one-way-function/
+      \endverb
+    \endentry
+    \entry{sphincs_spec}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Sphincs+}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sphincs.org/data/sphincs+-r3.1-specification.pdf
+      \endverb
+      \verb{url}
+      \verb https://sphincs.org/data/sphincs+-r3.1-specification.pdf
+      \endverb
+    \endentry
+    \entry{mceliece_spec}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Classic McEliece: conservative code-based cryptography}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://classic.mceliece.org/nist/mceliece-20201010.pdf
+      \endverb
+      \verb{url}
+      \verb https://classic.mceliece.org/nist/mceliece-20201010.pdf
+      \endverb
+    \endentry
+    \entry{hqc_spec}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Hamming Quasi-Cyclic (HQC)}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pqc-hqc.org/doc/hqc-specification_2024-02-23.pdf
+      \endverb
+      \verb{url}
+      \verb https://pqc-hqc.org/doc/hqc-specification_2024-02-23.pdf
+      \endverb
+    \endentry
+    \entry{falcon_spec}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Falcon: Fast-Fourier Lattice-based Compact Signatures over NTRU}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://falcon-sign.info/falcon.pdf
+      \endverb
+      \verb{url}
+      \verb https://falcon-sign.info/falcon.pdf
+      \endverb
+    \endentry
     \entry{esp32-spec}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{title}{ESP32­WROOM­32E ESP32­WROOM­32UE Datasheet}
       \field{urlday}{7}
@@ -231,8 +358,8 @@
       \endverb
     \endentry
     \entry{esp32-pinout}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{title}{PLACA ESP32 DEVKITC V4 WIFI+BT 4MB IOT}
       \field{urlday}{7}
@@ -248,8 +375,8 @@
       \endverb
     \endentry
     \entry{rp2040-spec}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{RP2040 Datasheet}
       \field{urlday}{7}
@@ -265,8 +392,8 @@
       \endverb
     \endentry
     \entry{rp2040-img}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{RP2040}
       \field{urlday}{7}
@@ -282,8 +409,8 @@
       \endverb
     \endentry
     \entry{nucleo-spec}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{STM32L4R5xx STM32L4R7xx STM32L4R9xx}
       \field{urlday}{7}
@@ -299,8 +426,8 @@
       \endverb
     \endentry
     \entry{nucleo-img}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{ST Nucleo L4R5ZI}
       \field{urlday}{7}
@@ -316,8 +443,8 @@
       \endverb
     \endentry
     \entry{arduino}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{Getting Started with Arduino IDE 2}
       \field{urlday}{7}
@@ -333,8 +460,8 @@
       \endverb
     \endentry
     \entry{espressif}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{Get Started}
       \field{urlday}{7}
@@ -350,8 +477,8 @@
       \endverb
     \endentry
     \entry{platformio}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{PlatformIO Core (CLI)}
       \field{urlday}{7}
@@ -367,8 +494,8 @@
       \endverb
     \endentry
     \entry{idf-freertos}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{FreeRTOS (IDF)}
       \field{urlday}{7}
@@ -384,8 +511,8 @@
       \endverb
     \endentry
     \entry{espressif-install}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{Standard Toolchain Setup for Linux and macOS}
       \field{urlday}{7}
@@ -401,8 +528,8 @@
       \endverb
     \endentry
     \entry{esp-prog}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{ESP-Prog}
       \field{urlday}{7}
@@ -418,8 +545,8 @@
       \endverb
     \endentry
     \entry{esp-prog-pinout}{misc}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{Espressif ESP-Prog ESP32 JTAG Debug Probe – Pinout Diagram}
       \field{urlday}{7}
@@ -435,8 +562,8 @@
       \endverb
     \endentry
     \entry{esp-prog-conn}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{Please help me connecting Esp-prog to ESP32-DevkitC-v4}
       \field{urlday}{7}
@@ -452,8 +579,8 @@
       \endverb
     \endentry
     \entry{github-dilithium}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{Dilithium}
       \field{urlday}{7}
@@ -469,8 +596,8 @@
       \endverb
     \endentry
     \entry{esp32-random}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{Random Number Generation}
       \field{urlday}{7}
@@ -486,8 +613,8 @@
       \endverb
     \endentry
     \entry{esp32-forum1}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{Guru Meditation Error: Core 0 panic'ed (LoadProhibited). Exception was unhandled.}
       \field{urlday}{7}
@@ -503,8 +630,8 @@
       \endverb
     \endentry
     \entry{esp32-forum2}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{title}{Troubleshooting Double Exception}
       \field{urlday}{7}
@@ -520,8 +647,8 @@
       \endverb
     \endentry
     \entry{github-kyber}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{title}{Kyber}
       \field{urlday}{7}
@@ -537,8 +664,8 @@
       \endverb
     \endentry
     \entry{lilygo}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{title}{LilyGO T-Display RP2040}
       \field{urlday}{7}
@@ -554,8 +681,8 @@
       \endverb
     \endentry
     \entry{pico-sdk}{misc}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{title}{Raspberry Pi Documentation}
       \field{urlday}{7}
@@ -571,8 +698,8 @@
       \endverb
     \endentry
     \entry{pico-sdk-github}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{title}{Raspberry Pi Pico SDK}
       \field{urlday}{7}
@@ -624,8 +751,8 @@
       \strng{authornamehash}{a38d3f71d66cb422c6c6a328de190154}
       \strng{authorfullhash}{864e9dddc46f90e95e924a2ba76e822e}
       \strng{authorfullhashraw}{864e9dddc46f90e95e924a2ba76e822e}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{{IEEE} European Symposium on Security and Privacy, EuroS{\&}P 2022 - Workshops, Genoa, Italy, June 6-10, 2022}
@@ -644,8 +771,8 @@
       \endverb
     \endentry
     \entry{pqclean-github}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{title}{PQClean}
       \field{urlday}{7}
@@ -661,8 +788,8 @@
       \endverb
     \endentry
     \entry{add-compile-options}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{add compile options}
       \field{urlday}{7}
@@ -678,8 +805,8 @@
       \endverb
     \endentry
     \entry{get-rand-32}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{High Level APIs}
       \field{urlday}{7}
@@ -695,8 +822,8 @@
       \endverb
     \endentry
     \entry{sphincs-github}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{SPHINCS+}
       \field{urlday}{7}
@@ -712,8 +839,8 @@
       \endverb
     \endentry
     \entry{keil}{misc}{}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{µVision GUI}
       \field{urlday}{7}
@@ -729,8 +856,8 @@
       \endverb
     \endentry
     \entry{stm32cube}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{STM32Cube}
       \field{urlday}{7}
@@ -746,8 +873,8 @@
       \endverb
     \endentry
     \entry{stm32cubemx}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{STM32CubeMX}
       \field{urlday}{7}
@@ -763,8 +890,8 @@
       \endverb
     \endentry
     \entry{stm32cubeide}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{STM32CubeIDE}
       \field{urlday}{7}
@@ -780,8 +907,8 @@
       \endverb
     \endentry
     \entry{stm32cubemonitor}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{STM32CubeMonitor}
       \field{urlday}{7}
@@ -797,8 +924,8 @@
       \endverb
     \endentry
     \entry{stm32cubeprogrammer}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{STM32CubeProg}
       \field{urlday}{7}
@@ -814,8 +941,8 @@
       \endverb
     \endentry
     \entry{stm32cubeL4}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{title}{STM32CubeL4}
       \field{urlday}{7}
@@ -830,9 +957,26 @@
       \verb https://github.com/STMicroelectronics/STM32CubeL4/tree/master
       \endverb
     \endentry
+    \entry{pqm4}{misc}{}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{title}{µVision GUI}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/mupq/pqm4
+      \endverb
+      \verb{url}
+      \verb https://github.com/mupq/pqm4
+      \endverb
+    \endentry
     \entry{ina219}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{title}{INA219 Zerø-Drift, Bidirectional Current/Power Monitor With I2C Interface}
       \field{urlday}{7}
@@ -848,8 +992,8 @@
       \endverb
     \endentry
     \entry{esp_timer_get_time}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{title}{ESP Timer (High Resolution Timer)}
       \field{urlday}{7}
@@ -865,8 +1009,8 @@
       \endverb
     \endentry
     \entry{get_absolute_time}{misc}{}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{title}{High Level APIs}
       \field{urlday}{7}
