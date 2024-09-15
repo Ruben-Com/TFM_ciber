@@ -13,6 +13,8 @@ Los proyectos para este dispositivo están diseñados como ejemplos de la herram
 
 Para ejecutarlo, es necesario clonar el repositorio con dicha herramienta, incluir estos proyectos en el directorio de ejemplos y añadir dichos proyectos en el archivo CMakeLists.txt.
 A continuación, hay que establecer la variable de entorno PICO_SDK_PATH al repositorio recién clonado, crear un directorio _build_ y ejecutar
+
     cd build && cmake ..
     cd project_name && make -j4
+    
 Una vez está creado el archivo .elf2, se debe conectar el dispositivo al computador y cargar este archivo.
